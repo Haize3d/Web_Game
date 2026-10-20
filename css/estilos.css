@@ -1,0 +1,45 @@
+:root{
+    --color_de_fondo: #E0DAD2;
+    --resaltado_areas: #FFFFFF;
+    --resaltado_iconos: #C6A780;
+    --color_marca: #522F1C;
+    --color_fuentes: #0F0F0F;
+    --color_boton: #C38342;
+    --degr_boton: linear-gradient(to bottom, var(--color_boton), var(--color_boton) 70%, var(--resaltado_iconos))
+}
+
+@font-face {
+    font-family: 'plus-jakarta-sans';
+    src: url(Fuentes/PlusJakartaSans-VariableFont_wght.ttf);
+    font-weight: 430;
+    font-style: normal;
+}
+
+html, body{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: var(--color_de_fondo);
+}
+
+h1{
+    font-size: 28px;
+}
+
+h2{
+    font-size: 22px;
+}
+
+p{
+    font-size: 16px;
+}
+
+a{
+    font-size: 14px;
+}
+
+button{
+    padding: 24px;
+    background: var(--degr_boton);
+    border: none;
+    border-radius: 8px;
+    color: var(--resaltado_areas);
+}
