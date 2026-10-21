@@ -1,13 +1,84 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Game</title>
+        <title>Gestor de almacén</title>
         <meta charset="UTF-8"/>
         <link rel="stylesheet" href="css/estilos.css"/>
+        <link rel="icon" href="">
+
     </head>
     <body>
-        <header></header>
-        <main></main>
+        <div class="Logo">
+            <img src="" alt="Logo Web-Game">
+        </div>
+        <header>
+            <h1>Formulario de Alta</h1>
+
+            <section>
+                <ul class="Menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catalogo</a></li>
+                    <li><a href="alta.html">Alta de producto</a></li>
+                    <li><a href="inventario.html">Inventario</a></li>
+                </ul>
+            </section>
+
+        <main>
+            <h1>Alta de producto</h1>
+            <form class="Formulario de alta" action="" method="post">
+                <div class="campo-nombre">
+                    <label>Nombre:</label>
+                    <input type="text" id="nombre" name="Nombre" required>
+                </div>
+                <div class="zona-imagen">
+                    <label>Imagen del producto</label>
+                    <input type="file" id="imagen" name="imagen">
+                </div>
+                <div class="campo-codigo">
+                    <label>Codigo:</label>
+                    <input type="text" id="codigo" name="codigo" placeholder="PS5-001" required>
+                </div>
+                <div class="campo3">
+                    <label>Categoria</label>
+                    <select id="categoria" name="categoria">
+                        <option>Consolas y Videojuegos</option>
+                        <option>Pc Gaming</option>
+                        <option>Smartphones</option>
+                        <option>Segunda mano</option>
+                        <option>Reacondicionado</option>
+                    </select>
+                </div>
+                <div class="campo-plataforma">
+                    <label>Plataforma:</label>
+                    <select id="Plataforma" name="Plataforma">
+                        <option>PS5</option>
+                        <option>PS4</option>
+                        <option>Xbox Series XS</option>
+                        <option>Nintendo Switch</option>
+                        <option>PC</option>
+                        <option>Android</option>
+                        <option>iOS</option>
+                        <option>Multiplataforma</option>
+                    </select>
+                </div>
+                <div class="campo-unidades">
+                    <label>Unidades:</label>
+                    <input type="number" id="unidades" name="unidades" min="0">
+                </div>
+                <div class="campo-precio">
+                    <label>Precio:</label>
+                    <input type="number" id="precio" name="precio" min="0" step="0.01">
+                </div>
+                <div class="campo campo-ubicacion">
+                    <label>Ubicación en almacen:</label>
+                    <input type="text" id="ubicacion" name="ubicacion" placeholder="Pasillo 3 - Estantería B">
+                </div>
+                <div class="botones">
+                    <button type="submit" class="boton boton-principal">Añadir</button>
+                </div>
+            </form> 
+            
+        </main>
         <footer></footer>
     </body>
 </html>
