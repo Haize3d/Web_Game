@@ -43,3 +43,8 @@ button{
     border-radius: 8px;
     color: var(--resaltado_areas);
 }
+
+img {
+    width: 70px;
+    height: auto;
+}
