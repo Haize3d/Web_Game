@@ -1,13 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
-        <title>Game</title>
         <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Catálogo | GAME</title>
         <link rel="stylesheet" href="css/estilos.css"/>
     </head>
     <body>
-        <header></header>
-        <main></main>
-        <footer></footer>
+        <header class="cabecera-catalogo">
+            <a class="marca-catalogo" href="index.html" aria-label="GAME, inicio">G</a>
+            <nav aria-label="Navegación principal">
+                <a href="catalogo.html" aria-current="page">Catálogo</a>
+                <a href="inventario.html">Inventario</a>
+                <a href="alta.html">Altas</a>
+            </nav>
+        </header>
+
+        <main class="pagina-catalogo">
+            <h1>Catálogo</h1>
+
+            <section class="zona-filtros" aria-labelledby="titulo-filtros">
+                <h2 id="titulo-filtros">Filtros</h2>
+                <div class="filtros">
+                    <fieldset class="filtro">
+                        <legend>Categoría</legend>
+                        <label><input type="radio" name="categoria" id="categoria-todas" checked/> Todas</label>
+                        <label><input type="radio" name="categoria" id="categoria-consolas"/> Consolas</label>
+                        <label><input type="radio" name="categoria" id="categoria-videojuegos"/> Videojuegos</label>
+                        <label><input type="radio" name="categoria" id="categoria-accesorios"/> Accesorios</label>
+                    </fieldset>
+
+                    <fieldset class="filtro">
+                        <legend>Precio</legend>
+                        <label><input type="radio" name="precio" id="precio-todos" checked/> Todos</label>
+                        <label><input type="radio" name="precio" id="precio-hasta-75"/> Hasta 75 €</label>
+                        <label><input type="radio" name="precio" id="precio-mas-75"/> Más de 75 €</label>
+                    </fieldset>
+
+                    <fieldset class="filtro">
+                        <legend>Disponibilidad</legend>
+                        <label><input type="radio" name="stock" id="stock-todo" checked/> Todos</label>
+                        <label><input type="radio" name="stock" id="stock-disponible"/> En stock</label>
+                        <label><input type="radio" name="stock" id="stock-bajo"/> Stock bajo</label>
+                        <label><input type="radio" name="stock" id="stock-agotado"/> Agotado</label>
+                    </fieldset>
+
+                    <fieldset class="filtro">
+                        <legend>Plataforma</legend>
+                        <label><input type="radio" name="plataforma" id="plataforma-todas" checked/> Todas</label>
+                        <label><input type="radio" name="plataforma" id="plataforma-switch"/> Nintendo Switch</label>
+                        <label><input type="radio" name="plataforma" id="plataforma-playstation"/> PlayStation 5</label>
+                        <label><input type="radio" name="plataforma" id="plataforma-pc"/> PC</label>
+                    </fieldset>
+                </div>
+            </section>
+
+            <section aria-labelledby="titulo-productos">
+                <h2 id="titulo-productos">Productos</h2>
+                <div class="rejilla-productos">
+                    <article class="tarjeta-producto categoria-consolas plataforma-switch precio-mas-75 en-stock">
+                        <div class="imagen-producto" role="img" aria-label="Consola Nintendo Switch OLED">🎮</div>
+                        <h3>Nintendo Switch OLED</h3>
+                        <p>Nintendo Switch</p>
+                        <p class="precio-producto">349,99 €</p>
+                        <p class="etiqueta-stock">En stock · 12 unidades</p>
+                        <a href="inventario.html">Ver en inventario</a>
+                    </article>
+
+                    <article class="tarjeta-producto categoria-accesorios plataforma-playstation precio-hasta-75 stock-bajo">
+                        <div class="imagen-producto" role="img" aria-label="Mando inalámbrico DualSense">🎮</div>
+                        <h3>Mando inalámbrico DualSense</h3>
+                        <p>PlayStation 5</p>
+                        <p class="precio-producto">74,99 €</p>
+                        <p class="etiqueta-stock">Stock bajo · 2 unidades</p>
+                        <a href="inventario.html">Ver en inventario</a>
+                    </article>
+
+                    <article class="tarjeta-producto categoria-videojuegos plataforma-switch precio-hasta-75 en-stock">
+                        <div class="imagen-producto" role="img" aria-label="Videojuego The Legend of Zelda">🕹️</div>
+                        <h3>The Legend of Zelda: Tears of the Kingdom</h3>
+                        <p>Nintendo Switch</p>
+                        <p class="precio-producto">59,99 €</p>
+                        <p class="etiqueta-stock">En stock · 8 unidades</p>
+                        <a href="inventario.html">Ver en inventario</a>
+                    </article>
+
+                    <article class="tarjeta-producto categoria-accesorios plataforma-playstation plataforma-pc precio-mas-75 agotado">
+                        <div class="imagen-producto"><img src="img/auriculares.jpg" alt="Auriculares gaming"></div>
+                        <h3>Auriculares gaming inalámbricos</h3>
+                        <p>PlayStation 5 · PC</p>
+                        <p class="precio-producto">89,95 €</p>
+                        <p class="etiqueta-stock">Agotado</p>
+                        <a href="inventario.html">Ver en inventario</a>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="pie-catalogo">
+            <p>GAME · Gestión de almacén</p>
+        </footer>
     </body>
 </html>
