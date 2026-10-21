@@ -9,7 +9,7 @@
 }
 
 @font-face {
-    font-family: 'plus-jakarta-sans';
+    font-family: 'Plus Jakarta Sans';
     src: url(Fuentes/PlusJakartaSans-VariableFont_wght.ttf);
     font-weight: 430;
     font-style: normal;
@@ -20,26 +20,287 @@ html, body{
     background-color: var(--color_de_fondo);
 }
 
-h1{
-    font-size: 28px;
-}
-
-h2{
-    font-size: 22px;
-}
-
-p{
-    font-size: 16px;
-}
-
-a{
-    font-size: 14px;
-}
+h1{font-size: 28px;}
+h2{font-size: 22px;}
+p{font-size: 16px;}
+a{font-size: 14px;}
 
 button{
+    font-family: inherit;
     padding: 24px;
     background: var(--degr_boton);
     border: none;
     border-radius: 8px;
+    color: var(--color_fuentes);
+    font-size: 14px;
+
+    transition: background 0.3s ease, outline 0.3s ease;
+}
+button:hover{
+    background: var(--color_marca);
     color: var(--resaltado_areas);
+}
+button:active{
+    outline: 3px solid var(--color_marca);
+    background: var(--color_boton);
+    color: var(--color_fuentes);
+}
+
+.boton-secundario{
+    background: var(--resaltado_areas);
+    outline: 3px solid var(--color_marca);
+    color: var(--color_fuentes);
+}
+.boton-secundario:hover{
+    background: var(--color_boton);
+    outline: 3PX solid var(--color_marca);
+    color: var(--resaltado_areas);
+}
+.boton-secundario:active{
+    background: var(--resaltado_areas);
+    outline: 3px solid var(--color_boton);
+    color: var(--color_fuentes);
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--resaltado_areas);
+    padding: 24px;
+    gap: 24px;
+    margin: 24px;
+    border-radius: 20px;
+    box-shadow: 0 4px 4px #522F1C40;
+}
+
+/* ===== COMPONENTES ===== */
+ #contenedor-productos{
+    width: 60vw;
+ }
+.tarjeta-de-producto{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color_de_fondo);
+    width: 20vw;
+    aspect-ratio: 1 / 1.5;
+    justify-content: center;
+    align-items: center;
+    color: #522F1C;
+    border-radius: 12px;
+
+    transition: transform 0.3s ease;
+}
+.tarjeta-de-producto:hover{
+    transform: scale(1.05);
+    box-shadow: 0 5px 4px #522F1C40;
+}
+.fondo_producto{
+    background-color: var(--resaltado_areas);
+    width: 90%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 -5px 4px var(--color_de_fondo) inset;
+    border: 2px solid var(--color_de_fondo);
+    border-radius: 12px;
+}
+.img_producto{
+    height: 100%;
+    width: auto;
+}
+.nombre_producto{
+    width: 90%;
+    margin: 0;
+}
+.precio_producto{
+    font-size: 22px;
+    font-weight: bold;
+    align-self: flex-end;
+    margin: 5px;
+    margin-right: 5%;
+}
+.comprar_boton{
+    width: 90%;
+    padding: 10px;
+    font-size: 22px;
+    box-shadow: 0 -5px 4px var(--color_de_fondo) inset;
+    color: var(--resaltado_areas);
+}
+.comprar_boton:active{
+    box-shadow: 0 -5px 4px var(--color_marca) inset;
+}
+
+/* ===== ETIQUETAS =====*/
+#contenedor-etiquetas{
+    width: 60vw;
+}
+.etiqueta{
+    background: var(--color_marca);
+    color: var(--resaltado_areas);
+    padding: 10px;
+    border-radius: 8px;
+    width: 7vw;
+    text-align: center;
+    
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+#stock{
+    background: linear-gradient(to right, var(--color_marca), var(--color_marca) 70%, #5C9B51);
+}
+#stock:hover{
+    background: #5C9B51;
+    color: var(--color_marca);
+    font-weight: bold;
+    transform: scale(1.1);
+}
+#bajo{
+    background: linear-gradient(to right, var(--color_marca), var(--color_marca) 50%, #FBFF00);
+    box-shadow: 0 0 5px #FBFF00 inset;
+}
+#bajo:hover{
+    background: #FBFF00;
+    color: var(--color_marca);
+    font-weight: bold;
+    transform: scale(1.1);
+}
+#agotado{
+    background: linear-gradient(to right, var(--color_marca), var(--color_marca) 30%, #FF0000);
+    box-shadow: 0 0 18px #FF0000 inset;
+}
+#agotado:hover{
+    background: #FF0000;
+    color: var(--color_marca);
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+/* ===== FORMULARIO ===== */
+#contenedor-formulario{
+    width: 60vw;
+}
+form{
+    background: var(--color_de_fondo);
+    border-radius: 18px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    transition: transform 0.3s ease;
+}
+form:hover{
+    transform: scale(1.02);
+}
+.input_detalles{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.input_descripcion{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    gap: 16px;
+}
+input{
+    display: flex;
+    border: 2px solid var(--resaltado_iconos);
+    background: none;
+    border-radius: 5px;
+    flex-basis: 50%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+label{
+    color: var(--color_marca);
+    flex-basis: 50%;
+}
+.inputs{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+#input_imagen{
+    flex-basis: 50%;
+}
+#boton_formulario{
+    padding: 10px;
+    width: 40%;
+    justify-self: center;
+    align-self: center;
+    font-size: 22px;
+    box-shadow: 0 -5px 4px var(--color_de_fondo) inset;
+    color: var(--resaltado_areas);
+}
+#label_nombre{
+    flex-basis: 10%;
+}
+#input_nombre{
+    flex-basis: 90%;
+}
+span{
+    align-items: center;
+}
+#input_imagen{
+    border: none;
+    background: var(--resaltado_areas);
+    box-shadow: 0 -5px 4px var(--color_de_fondo) inset;
+}
+
+@media (max-width: 400px){
+    .tarjeta-de-producto{
+        display: flex;
+        flex-direction: row;
+        width: 90vw;
+        height: 20vh;
+        aspect-ratio: 4 / 1;
+        align-items: center;
+        justify-content: center;
+    }
+    .nombre_producto{
+        display: flex;
+        overflow: hidden;
+        max-height: 50%;
+        flex-basis: 50%;
+    }
+    .fondo_producto{
+        flex-basis: 30%;
+        height: 90%;
+        margin: 0;
+    }
+    .img_producto{
+        width: 100%;
+        height: auto;
+    }
+    .comprar_boton{
+        padding: 0;
+        width: 50%;
+        margin-right: 5%;
+    }
+    .tarjeta_p_descripcion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-basis: 70%;
+    }
+    .tarjeta_p_datos{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50%;
+        flex-basis: 50%;
+    }
+    .tarjeta_p_detalles{
+        display: flex;
+        flex-direction: column;
+        align-items: right;
+        justify-content: center;
+        width: 50%;
+        margin-left: 5%;
+    }
 }
