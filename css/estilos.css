@@ -49,6 +49,75 @@ img {
     height: auto;
 }
 
+/* Estilos del Inicio (Index.html - Header) */
+.encabezado {
+    background-color: #522F1C;
+    padding:20px;
+    display:flex;
+    align-items: center;
+}
+
+.imagen-logo{
+    display:flex;
+    width: 130px;
+    height: 130px;
+    margin-right: 20px;
+}
+
+.imagen-logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.titulo-menu{
+    margin-left: 20px;
+    text-align: center;
+    color:white;
+}
+
+.menu{
+    margin-left: auto;
+}
+.menu ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    display: block;
+}
+
+.menu li{
+    background-color: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li p{
+    display: none;
+    position:absolute;
+}
+.menu a {
+    display: flex;
+    align-items: center;
+}
+
+.menu li:hover p{
+    background-color: #C6A780;
+    display: block;
+}
+
 /* Estilos del catálogo */
 .cabecera-catalogo{
     display: flex;
