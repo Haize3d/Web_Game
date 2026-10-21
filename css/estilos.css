@@ -48,3 +48,187 @@ img {
     width: 70px;
     height: auto;
 }
+
+/* Estilos del catálogo */
+.cabecera-catalogo{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 12px 24px;
+    background-color: var(--color_marca);
+    font-family: 'plus-jakarta-sans', sans-serif;
+}
+
+.marca-catalogo{
+    padding: 4px 12px;
+    color: var(--color_marca);
+    background-color: var(--resaltado_iconos);
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.cabecera-catalogo nav{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.cabecera-catalogo nav a{
+    color: var(--resaltado_areas);
+    text-decoration: none;
+}
+
+.pagina-catalogo{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+    font-family: 'plus-jakarta-sans', sans-serif;
+}
+
+.pagina-catalogo h1{
+    margin-bottom: 16px;
+}
+
+.zona-filtros,
+.tarjeta-producto{
+    padding: 16px;
+    background-color: var(--resaltado_areas);
+    border: 1px solid var(--resaltado_iconos);
+    border-radius: 8px;
+}
+
+.zona-filtros{
+    margin-bottom: 24px;
+}
+
+.zona-filtros h2{
+    margin-top: 0;
+}
+
+.filtros{
+    display: grid;
+    gap: 12px;
+}
+
+.filtro{
+    padding: 8px;
+    border: 1px solid var(--resaltado_iconos);
+}
+
+.filtro label{
+    display: inline-block;
+    margin: 4px 8px 4px 0;
+}
+
+.rejilla-productos{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.tarjeta-producto .imagen-producto{
+    display: flex;
+    min-height: 140px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    background-color: var(--color_de_fondo);
+    font-size: 56px;
+}
+
+.tarjeta-producto .imagen-producto img{
+    max-width: 100%;
+    max-height: 140px;
+    object-fit: contain;
+}
+
+.tarjeta-producto h3{
+    margin-bottom: 8px;
+    color: var(--color_marca);
+}
+
+.tarjeta-producto p{
+    margin: 8px 0;
+}
+
+.tarjeta-producto .precio-producto{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tarjeta-producto .etiqueta-stock{
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: var(--color_de_fondo);
+    border-radius: 12px;
+}
+
+.tarjeta-producto .stock-bajo{
+    background-color: var(--resaltado_iconos);
+}
+
+.tarjeta-producto .agotado{
+    border: 1px solid var(--resaltado_iconos);
+}
+
+.tarjeta-producto > a{
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--color_marca);
+}
+
+.pie-catalogo{
+    padding: 16px 24px;
+    color: var(--resaltado_areas);
+    background-color: var(--color_marca);
+    font-family: 'plus-jakarta-sans', sans-serif;
+}
+
+.pie-catalogo p{
+    margin: 0;
+}
+
+/* Oculta las tarjetas que no coinciden con los filtros marcados. */
+.pagina-catalogo:has(#categoria-consolas:checked) .tarjeta-producto:not(.categoria-consolas),
+.pagina-catalogo:has(#categoria-videojuegos:checked) .tarjeta-producto:not(.categoria-videojuegos),
+.pagina-catalogo:has(#categoria-accesorios:checked) .tarjeta-producto:not(.categoria-accesorios){
+    display: none;
+}
+
+.pagina-catalogo:has(#precio-hasta-75:checked) .tarjeta-producto:not(.precio-hasta-75),
+.pagina-catalogo:has(#precio-mas-75:checked) .tarjeta-producto:not(.precio-mas-75){
+    display: none;
+}
+
+.pagina-catalogo:has(#stock-disponible:checked) .tarjeta-producto:not(.en-stock),
+.pagina-catalogo:has(#stock-bajo:checked) .tarjeta-producto:not(.stock-bajo),
+.pagina-catalogo:has(#stock-agotado:checked) .tarjeta-producto:not(.agotado){
+    display: none;
+}
+
+.pagina-catalogo:has(#plataforma-switch:checked) .tarjeta-producto:not(.plataforma-switch),
+.pagina-catalogo:has(#plataforma-playstation:checked) .tarjeta-producto:not(.plataforma-playstation),
+.pagina-catalogo:has(#plataforma-pc:checked) .tarjeta-producto:not(.plataforma-pc){
+    display: none;
+}
+
+@media (min-width: 600px){
+    .filtros{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rejilla-productos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px){
+    .filtros{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .rejilla-productos{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
