@@ -18,6 +18,7 @@
 html, body{
     font-family: "Plus Jakarta Sans", sans-serif;
     background-color: var(--color_de_fondo);
+    margin: 0;
 }
 
 h1{
@@ -43,13 +44,49 @@ button{
     border-radius: 8px;
     color: var(--resaltado_areas);
 }
+button:hover{
+    background: var(--color_marca);
+    color: var(--resaltado_areas);
+}
+button:active{
+    outline: 3px solid var(--color_marca);
+    background: var(--color_boton);
+    color: var(--color_fuentes);
+}
+.boton-secundario{
+    background: var(--resaltado_areas);
+    outline: 3px solid var(--color_marca);
+    color: var(--color_fuentes);
+}
+.boton-secundario:hover{
+    background: var(--color_boton);
+    outline: 3PX solid var(--color_marca);
+    color: var(--resaltado_areas);
+}
+.boton-secundario:active{
+    background: var(--resaltado_areas);
+    outline: 3px solid var(--color_boton);
+    color: var(--color_fuentes);
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--resaltado_areas);
+    padding: 24px;
+    gap: 24px;
+    margin: 24px;
+    border-radius: 20px;
+    box-shadow: 0 4px 4px #522F1C40;
+    overflow: hidden;
+}
 
 img {
     width: 70px;
     height: auto;
 }
 
-/* Estilos del Inicio (Index.html - Header) */
+/* ===== HEADER ===== */
 .encabezado {
     background-color: #522F1C;
     padding:20px;
@@ -57,24 +94,23 @@ img {
     align-items: center;
 }
 
-.imagen-logo{
-    display:flex;
-    width: 130px;
-    height: 130px;
-    margin-right: 20px;
-}
-
-.imagen-logo img{
-    width: 100%;
-    height: 100%;
-}
-
-.titulo-menu{
+#contenedor-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-left: 20px;
-    text-align: center;
-    color:white;
 }
-
+#imagen-logo{
+    width: 5vw;
+    border-radius: 50%;
+    height: auto;
+}
+.titulo-menu{
+    text-align: center;
+    color:var(--resaltado_areas);
+    margin: 10px 0 0;
+}
 .menu{
     margin-left: auto;
 }
@@ -85,6 +121,29 @@ img {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+#desplegable{
+    display: none;
+    position: absolute;
+    margin: 0;
+}
+.icon-header:hover  #desplegable{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    background: var(--resaltado_iconos);
+    border: var(--color_marca) 2px solid;
+    z-index: 100;
+    gap: 12px;
+    padding: 12px;
+    right: 2vw;
+    margin: 32px 0 0;
+}
+#desplegable li{
+    width: 100%;
+    background: none;
+    margin: 0;
+    height: auto;
 }
 
 .menu li img {
@@ -116,6 +175,83 @@ img {
 .menu li:hover p{
     background-color: #C6A780;
     display: block;
+}
+
+/* Estilos del Inicio (Index.html - Header) */
+#contenedor-index{
+    width: 80%;
+    justify-self: center;
+}
+.carrusel{
+    height: 60vh;
+}
+/* Carousel content positioning */
+.carousel-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 50;
+}
+.slideshow {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.slideshow-wrapper {
+    display: flex;
+    width: 400%; /*cantidad de imágenes * 100*/
+    height: 100%;
+    position: relative;
+    left: 0;
+    animation: slideshow 20s infinite;
+}
+.slide {
+    width: 100%;
+    height: 100%;
+}
+.slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Keyframe animations */
+@keyframes slideshow {
+    0%, 10% { left: 0; }
+    15%, 25% { left: -100%; }
+    30%, 40% { left: -200%; }
+    45%, 55% { left: -300%; }
+    60%, 70% { left: -200%; }
+    75%, 85% { left: -100%; }
+    90%, 100% { left: 0; }
+}
+/* Carousel control buttons */
+.slide-btn {
+    background-color: var(--color_de_fondo);
+    border-radius: 50%;
+    border: 0.1rem solid var(--color_marca);
+    width: 0.5rem;
+    height: 0.5rem;
+    cursor: pointer;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 70;
+}
+/* Position each button individually */
+.slide-btn-1 { left: 45%; }
+.slide-btn-2 { left: 50%; }
+.slide-btn-3 { left: 55%; }
+.slide-btn-4 { left: 60%; }
+/* Stop animation when focused on buttons */
+.slide-btn-1:focus ~ .slideshow-wrapper { animation: none; left: 0; }
+.slide-btn-2:focus ~ .slideshow-wrapper { animation: none; left: -100%; }
+.slide-btn-3:focus ~ .slideshow-wrapper { animation: none; left: -200%; }
+.slide-btn-4:focus ~ .slideshow-wrapper { animation: none; left: -300%; }
+.slide-btn:focus {
+    background-color: var(--color_marca);
 }
 
 /* Estilos del catálogo */
@@ -281,6 +417,183 @@ img {
 .pagina-catalogo:has(#plataforma-pc:checked) .tarjeta-producto:not(.plataforma-pc){
     display: none;
 }
+
+/* ===== COMPONENTES ===== */
+ #contenedor-productos{
+    width: 60vw;
+ }
+.tarjeta-de-producto{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color_de_fondo);
+    width: 20vw;
+    aspect-ratio: 1 / 1.5;
+    justify-content: center;
+    align-items: center;
+    color: #522F1C;
+    border-radius: 12px;
+
+    transition: transform 0.3s ease;
+}
+.tarjeta-de-producto:hover{
+    transform: scale(1.05);
+    box-shadow: 0 5px 4px #522F1C40;
+}
+.fondo_producto{
+    background-color: var(--resaltado_areas);
+    width: 90%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 -5px 4px var(--color_de_fondo) inset;
+    border: 2px solid var(--color_de_fondo);
+    border-radius: 12px;
+}
+.img_producto{
+    height: 100%;
+    width: auto;
+}
+.nombre_producto{
+    width: 90%;
+    margin: 0;
+}
+.precio_producto{
+    font-size: 22px;
+    font-weight: bold;
+    align-self: flex-end;
+    margin: 5px;
+    margin-right: 5%;
+}
+.comprar_boton{
+    width: 90%;
+    padding: 10px;
+    font-size: 22px;
+    box-shadow: 0 -5px 4px var(--color_de_fondo) inset;
+    color: var(--resaltado_areas);
+}
+.comprar_boton:active{
+    box-shadow: 0 -5px 4px var(--color_marca) inset;
+}
+
+/* ===== ETIQUETAS =====*/
+#contenedor-etiquetas{
+    width: 60vw;
+}
+.etiqueta{
+    background: var(--color_marca);
+    color: var(--resaltado_areas);
+    padding: 10px;
+    border-radius: 8px;
+    width: 7vw;
+    text-align: center;
+    
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+#stock{
+    background: linear-gradient(to right, var(--color_marca), var(--color_marca) 70%, #5C9B51);
+}
+#stock:hover{
+    background: #5C9B51;
+    color: var(--color_marca);
+    font-weight: bold;
+    transform: scale(1.1);
+}
+#bajo{
+    background: linear-gradient(to right, var(--color_marca), var(--color_marca) 50%, #FBFF00);
+    box-shadow: 0 0 5px #FBFF00 inset;
+}
+#bajo:hover{
+    background: #FBFF00;
+    color: var(--color_marca);
+    font-weight: bold;
+    transform: scale(1.1);
+}
+#agotado{
+    background: linear-gradient(to right, var(--color_marca), var(--color_marca) 30%, #FF0000);
+    box-shadow: 0 0 18px #FF0000 inset;
+}
+#agotado:hover{
+    background: #FF0000;
+    color: var(--color_marca);
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+/* ===== FORMULARIO ===== */
+#contenedor-formulario{
+    width: 60vw;
+}
+form{
+    background: var(--color_de_fondo);
+    border-radius: 18px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    transition: transform 0.3s ease;
+}
+form:hover{
+    transform: scale(1.02);
+}
+.input_detalles{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.input_descripcion{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    gap: 16px;
+}
+input{
+    display: flex;
+    border: 2px solid var(--resaltado_iconos);
+    background: none;
+    border-radius: 5px;
+    flex-basis: 50%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+label{
+    color: var(--color_marca);
+    flex-basis: 50%;
+}
+.inputs{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+#input_imagen{
+    flex-basis: 50%;
+}
+#boton_formulario{
+    padding: 10px;
+    width: 40%;
+    justify-self: center;
+    align-self: center;
+    font-size: 22px;
+    box-shadow: 0 -5px 4px var(--color_de_fondo) inset;
+    color: var(--resaltado_areas);
+}
+#label_nombre{
+    flex-basis: 10%;
+}
+#input_nombre{
+    flex-basis: 90%;
+}
+span{
+    align-items: center;
+}
+#input_imagen{
+    border: none;
+    background: var(--resaltado_areas);
+    box-shadow: 0 -5px 4px var(--color_de_fondo) inset;
+}
+
 
 @media (min-width: 600px){
     .filtros{
