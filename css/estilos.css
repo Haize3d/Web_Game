@@ -23,7 +23,11 @@ html, body{
 h1{font-size: 28px;}
 h2{font-size: 22px;}
 p{font-size: 16px;}
-a{font-size: 14px;}
+a{
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+}
 
 button{
     font-family: inherit;
@@ -683,4 +687,8 @@ img {
     .rejilla-productos{
         grid-template-columns: repeat(4, 1fr);
     }
+}
+
+.boton_add{
+    margin-bottom: 2%;
 }
