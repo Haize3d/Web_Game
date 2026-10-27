@@ -116,6 +116,7 @@ img {
 .menu li:hover p{
     background-color: #C6A780;
     display: block;
+    margin-bottom: 100px;
 }
 
 /* Estilos del catálogo */
