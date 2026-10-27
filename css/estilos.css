@@ -263,12 +263,12 @@ button:active{
     margin: 24px;
     border-radius: 20px;
     box-shadow: 0 4px 4px #522F1C40;
-}
+} 
 
 /* ===== COMPONENTES ===== */
- #contenedor-productos{
-    width: 60vw;
- }
+#contenedor-productos{
+width: 60vw;
+}
 .tarjeta-de-producto{
     display: flex;
     flex-direction: column;
@@ -340,12 +340,14 @@ button:active{
 #stock{
     background: linear-gradient(to right, var(--color_marca), var(--color_marca) 70%, #5C9B51);
 }
+
 #stock:hover{
     background: #5C9B51;
     color: var(--color_marca);
     font-weight: bold;
     transform: scale(1.1);
 }
+  
 #bajo{
     background: linear-gradient(to right, var(--color_marca), var(--color_marca) 50%, #FBFF00);
     box-shadow: 0 0 5px #FBFF00 inset;
@@ -380,9 +382,6 @@ form{
     gap: 16px;
 
     transition: transform 0.3s ease;
-}
-form:hover{
-    transform: scale(1.02);
 }
 .input_detalles{
     display: flex;
@@ -496,7 +495,6 @@ span{
         margin-left: 5%;
     }
 }
-=======
 
 img {
     width: 70px;
