@@ -8,27 +8,120 @@
     <body>
         <header>
             <div class="encabezado">
-
-                <div class="imagen-logo">
-                    <img src="img/logo-provisional.png" alt="Logo provisional">
+                <div href="index.html" id="contenedor-logo">
+                    <img src="img/logo-provisional.png" alt="Logo provisional" id="imagen-logo">
+                    <h5 class="titulo-menu">Gestor de almacén</h5>
                 </div>
-
-                <div class="titulo-menu">
-                    <h1>Gestor de almacén</h1>
-                </div>
-
                 <div class="menu">
                     <ul>
-                        <li><a href="catalogo.html"><img src="img/catalogo.png" alt="Catálogo"></a><p>Catálogo</p></li>
-                        <li><a href="inventario.html"><img src="img/inventario.png" alt="Inventario"></a><p>Inventario</p></li>
-                        <li><a href="alta.html"><img src="img/alta.png" alt="Altas"></a><p>Alta</p></li>
-                        <li><a href="#"><img src="img/menu.png" alt="Menú"></a><p>Menú</p></li>
-                        <li><a href="#"><img src="img/informacion.png" alt="Información"></a><p>Información</p></li>
+                        <li id="hover-desplegable">
+                            <p>Catálogo</p>
+                            <span class="icon-header"><img src="img/catalogo.svg" alt="Catálogo">
+                                <ul id="desplegable">
+                                    <li><h3 href="catalogo.html">Catálogo</h3></li>
+                                    <li>Consolas y videojuegos</li>
+                                    <li>PC Gaming</li>
+                                    <li>Informática</li>
+                                    <li>Smartphones y wearables</li>
+                                    <li>Televisores y sonido</li>
+                                    <li>Merchandising, figuras y juguetes</li>
+                                    <li>Cine y cómics</li>
+                                </ul>
+                            </span>
+                        </li>
+                        <li><a href="inventario.html"><img src="img/inventario.svg" alt="Inventario"></a><p>Inventario</p></li>
+                        <li><a href="alta.html"><img src="img/alta.svg" alt="Altas"></a><p>Alta</p></li>
+                        <li><a href="#"><img src="img/menu.svg" alt="Menú"></a><p>Menú</p></li>
+                        <li><a href="#"><img src="img/informacion.svg" alt="Información"></a><p>Información</p></li>
                     </ul>
                 </div>
         </header>
         <main>
-            <button>Añadir</button>
+            <div class="contenedor" id="contenedor-index">
+                <div class="carrusel">
+                    <div class="slideshow">
+                        <button class="slide-btn slide-btn-1"></button>
+                        <button class="slide-btn slide-btn-2"></button>
+                        <button class="slide-btn slide-btn-3"></button>
+                        <button class="slide-btn slide-btn-4"></button>
+
+                        <div class="slideshow-wrapper">
+                            <div class="slide">
+                                <img class="slide-img"
+                                    src="img/carrusel1.png" 
+                                    alt="Image 1">
+                            </div>
+                            <div class="slide">
+                                <img class="slide-img"
+                                    src="img/carrusel2.png"
+                                    alt="Image 2">
+                            </div>
+                            <div class="slide">
+                                <img class="slide-img"
+                                    src="img/carrusel3.png"
+                                    alt="Image 3">
+                            </div>
+                            <div class="slide">
+                                <img class="slide-img"
+                                    src="img/carrusel4.png"
+                                    alt="Image 4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor" id="contenedor-index">
+                <div class="tarjeta-de-producto">
+                    <a class="categoria_producto" id="tarjeta_categoria">PC hardware</a>
+                    <div class="fondo_producto">
+                        <img class="img_producto" id="tarjeta_img"src="https://media.game.es/COVERV2/3D_L/V1I/V1IN8O.png"/>
+                    </div>
+                    <p class="nombre_producto" id="tarjeta_nombre">MSI Cyborg 15 Intel Core 7-240H/32Gb/1Tb/RTX 5060 - 15.6´´ 144Hz - FreeDos - Ordenador Portatil Gaming</p>
+                    <p class="precio_producto" id="tarjeta_precio">1299'99€</p>
+                    <button class="comprar_boton" id="tarjeta_comprar">Comprar</button>
+                    <a class="puntos_producto" id="taejeta_puntos">Puntos: 7800</a>
+                </div>
+                <div class="tarjeta-de-producto">
+                    <a class="categoria_producto" id="tarjeta_categoria">PC hardware</a>
+                    <div class="fondo_producto">
+                        <img class="img_producto" id="tarjeta_img"src="https://media.game.es/COVERV2/3D_L/V1I/V1IN8O.png"/>
+                    </div>
+                    <p class="nombre_producto" id="tarjeta_nombre">MSI Cyborg 15 Intel Core 7-240H/32Gb/1Tb/RTX 5060 - 15.6´´ 144Hz - FreeDos - Ordenador Portatil Gaming</p>
+                    <p class="precio_producto" id="tarjeta_precio">1299'99€</p>
+                    <button class="comprar_boton" id="tarjeta_comprar">Comprar</button>
+                    <a class="puntos_producto" id="taejeta_puntos">Puntos: 7800</a>
+                </div>
+                <div class="tarjeta-de-producto">
+                    <a class="categoria_producto" id="tarjeta_categoria">PC hardware</a>
+                    <div class="fondo_producto">
+                        <img class="img_producto" id="tarjeta_img"src="https://media.game.es/COVERV2/3D_L/V1I/V1IN8O.png"/>
+                    </div>
+                    <p class="nombre_producto" id="tarjeta_nombre">MSI Cyborg 15 Intel Core 7-240H/32Gb/1Tb/RTX 5060 - 15.6´´ 144Hz - FreeDos - Ordenador Portatil Gaming</p>
+                    <p class="precio_producto" id="tarjeta_precio">1299'99€</p>
+                    <button class="comprar_boton" id="tarjeta_comprar">Comprar</button>
+                    <a class="puntos_producto" id="taejeta_puntos">Puntos: 7800</a>
+                </div>
+                <div class="tarjeta-de-producto">
+                    <a class="categoria_producto" id="tarjeta_categoria">PC hardware</a>
+                    <div class="fondo_producto">
+                        <img class="img_producto" id="tarjeta_img"src="https://media.game.es/COVERV2/3D_L/V1I/V1IN8O.png"/>
+                    </div>
+                    <p class="nombre_producto" id="tarjeta_nombre">MSI Cyborg 15 Intel Core 7-240H/32Gb/1Tb/RTX 5060 - 15.6´´ 144Hz - FreeDos - Ordenador Portatil Gaming</p>
+                    <p class="precio_producto" id="tarjeta_precio">1299'99€</p>
+                    <button class="comprar_boton" id="tarjeta_comprar">Comprar</button>
+                    <a class="puntos_producto" id="taejeta_puntos">Puntos: 7800</a>
+                </div>
+                <div class="tarjeta-de-producto">
+                    <a class="categoria_producto" id="tarjeta_categoria">PC hardware</a>
+                    <div class="fondo_producto">
+                        <img class="img_producto" id="tarjeta_img"src="https://media.game.es/COVERV2/3D_L/V1I/V1IN8O.png"/>
+                    </div>
+                    <p class="nombre_producto" id="tarjeta_nombre">MSI Cyborg 15 Intel Core 7-240H/32Gb/1Tb/RTX 5060 - 15.6´´ 144Hz - FreeDos - Ordenador Portatil Gaming</p>
+                    <p class="precio_producto" id="tarjeta_precio">1299'99€</p>
+                    <button class="comprar_boton" id="tarjeta_comprar">Comprar</button>
+                    <a class="puntos_producto" id="taejeta_puntos">Puntos: 7800</a>
+                </div>
+            </div>
         </main>
         <footer></footer>
     </body>
