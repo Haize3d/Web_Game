@@ -135,20 +135,28 @@ img {
     border: var(--color_marca) 2px solid;
     z-index: 100;
     gap: 12px;
-    padding: 12px;
     right: 2vw;
     margin: 32px 0 0;
+    background-color: var(--resaltado_areas);
 }
 #desplegable li{
     width: 100%;
     background: none;
     margin: 0;
     height: auto;
+    color: var(--color_fuentes);
+}
+
+#desplegable hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid var(--resaltado_iconos);
+    margin: 18px 0;
 }
 
 .menu li img {
-    width: 48px;
-    height: 48px;
+    width: 35px;
+    height: 35px;
     object-fit: contain;
     display: block;
 }
@@ -166,7 +174,9 @@ img {
 .menu li p{
     display: none;
     position:absolute;
+    margin-bottom: 90px;
 }
+
 .menu a {
     display: flex;
     align-items: center;
@@ -175,9 +185,132 @@ img {
 .menu li:hover p{
     background-color: #C6A780;
     display: block;
-    margin-bottom: 100px;
 }
 
+#hover-desplegable {
+    position: relative;
+}
+
+#hover-desplegable .icon-header > p {
+    display: none;
+    position: absolute;
+    bottom: calc(100% - 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    background-color: #C6A780;
+    white-space: nowrap;
+    z-index: 101;
+}
+
+#hover-desplegable:hover .icon-header > p {
+    display: block;
+}
+
+/* Estilos del icono Información (Popover - Header) */
+
+/* Popup de información */
+.elemento-informacion {
+    position: relative;
+}
+
+.popup-informacion {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: 400px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    padding: 16px;
+
+    background-color: var(--resaltado_areas);
+    color: var(--color_fuentes);
+
+    border: 1px solid #D8C8B9;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px #00000030;
+
+    text-align: left;
+    z-index: 1000;
+}
+
+.titulo-imagen{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap:20px;
+}
+
+#logo-grupal img{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap:20px;
+    border-radius:50%;
+}
+
+.titulo-imagen h2,
+.titulo-imagen h4 {
+    margin: 0;
+}
+
+.titulo-imagen img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.elemento-informacion:hover .popup-informacion,
+.elemento-informacion:focus-within .popup-informacion {
+    display: block;
+}
+
+.menu li .popup-informacion p {
+    display: block;
+    position: static;
+    width: auto;
+    height: auto;
+
+    margin: 10px 0;
+    padding: 0;
+
+    background: transparent;
+    color: var(--color_fuentes);
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.popup-informacion h2,
+.popup-informacion h3 {
+    color: var(--color_marca);
+}
+
+.popup-informacion h2 {
+    margin-top: 0;
+}
+
+.popup-informacion h3 {
+    margin-bottom: 10px;
+}
+
+.popup-informacion hr {
+    border: none;
+    border-top: 1px solid var(--resaltado_iconos);
+    margin: 18px 0;
+}
+
+.elemento-informacion > a {
+    flex-shrink: 0;
+}
+
+.oculto{
+    display:none !important;
+}
+
+/* Estilos del Inicio (Index.html - Header) */
 #contenedor-index{
     width: 80%;
     justify-self: center;

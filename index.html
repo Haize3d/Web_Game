@@ -3,39 +3,105 @@
     <head>
         <title>Game</title>
         <meta charset="UTF-8"/>
+        <script src="menu.js" defer></script>
         <link rel="stylesheet" type="text/css" href="css/estilos.css"/>
     </head>
     <body>
         <header>
             <div class="encabezado">
                 <div href="index.html" id="contenedor-logo">
-                    <img src="img/logo-provisional.png" alt="Logo provisional" id="imagen-logo">
+                    <img src="img/logo-grupal.png" alt="Logo provisional" id="imagen-logo">
                     <h5 class="titulo-menu">Gestor de almacén</h5>
                 </div>
+
                 <div class="menu">
                     <ul>
                         <li id="hover-desplegable">
-                            <p>Catálogo</p>
                             <span class="icon-header"><img src="img/catalogo.svg" alt="Catálogo">
+                                <p>Catálogo</p>
                                 <ul id="desplegable">
-                                    <li><h3 href="catalogo.html">Catálogo</h3></li>
+                                    <li><h3 a href="catalogo.html">Catálogo</h3></li>
+                                    <hr>
                                     <li>Consolas y videojuegos</li>
+                                    <hr>
                                     <li>PC Gaming</li>
+                                    <hr>
                                     <li>Informática</li>
+                                    <hr>
                                     <li>Smartphones y wearables</li>
+                                    <hr>
                                     <li>Televisores y sonido</li>
+                                    <hr>
                                     <li>Merchandising, figuras y juguetes</li>
+                                    <hr>
                                     <li>Cine y cómics</li>
                                 </ul>
                             </span>
                         </li>
-                        <li><a href="inventario.html"><img src="img/inventario.svg" alt="Inventario"></a><p>Inventario</p></li>
-                        <li><a href="alta.html"><img src="img/alta.svg" alt="Altas"></a><p>Alta</p></li>
-                        <li><a href="#"><img src="img/menu.svg" alt="Menú"></a><p>Menú</p></li>
-                        <li><a href="#"><img src="img/informacion.svg" alt="Información"></a><p>Información</p></li>
+                        <li><a href="inventario.html" id="icono-inventario"><img src="img/inventario.svg" alt="Inventario"></a><p>Inventario</p></li>
+                        <li><a href="alta.html" id="icono-alta"><img src="img/alta.svg" alt="Altas"></a><p>Alta</p></li>
+                        <li class="elemento-informacion"><a href="#" id="icono-informacion"><img src="img/informacion.svg" alt="Información"></a>
+                            <p>Información</p>
+                            <div class="popup-informacion">
+                                <div class="titulo-imagen" id="logo-grupal">
+                                    <h2>Gestor de almacén</h2>
+                                    <img src="img/logo-grupal.png" alt="Logo provisional">
+                                </div>
+
+                                <hr>
+
+                                <h3>Todo tu almacén, bajo control</h3>
+                                <p>
+                                    Selecciona los productos que quieras y gestiona tu almacén fácilmente. Consulta sus detalles, revisa las existencias y descubre todo lo que necesitas.
+                                </p>
+
+                                <hr>
+
+                                <h3>Funciones principales</h3>
+
+                                <hr>
+
+                                <div class="titulo-imagen">
+                                    <h4>01. Catálogo</h4>
+                                    <img src="img/catalogo.svg" alt="Catálogo">
+                                </div>
+                                <p>Consulta de productos - Productos en cuadrícula con filtros y asignación.</p>
+                    
+                                <hr>
+
+                                <div class="titulo-imagen">
+                                    <h4>02. Inventario</h4>
+                                    <img src="img/inventario.svg" alt="Inventario">
+                                </div>
+                                <p>Busqueda de productos - Estado de cada producto por fila y detalle emergente.</p>
+
+                                <hr>
+
+                                <div class="titulo-imagen">
+                                    <h4>03. Altas</h4>
+                                    <img src="img/alta.svg" alt="Altas">
+                                </div>
+                                <p>Alta de productos - Registro de productos para añadirlos a la carretilla de compra.</p>
+
+                                <hr>
+
+                                <div class="titulo-imagen">
+                                    <h4>03. Menú</h4>
+                                    <img src="img/menu.svg" alt="Menú">
+                                </div>
+                                <p>Ocultar iconos del encabezado - Mostrar iconos al volver a pulsar el menú.</p>
+
+                                <hr>
+
+                                <h3>Créditos</h3>
+                                <p>Ander Fulgencio, Eneko Martín, Arkaitz Jiménez, Aimar Sandoval y Haizea Munoz.</p>
+                            </div>
+                        </li>
+                        <li><a href="#" id="icono-menu"><img src="img/menu.svg" alt="Menú"></a><p>Menú</p></li>
                     </ul>
                 </div>
         </header>
+        
         <main>
             <div class="contenedor" id="contenedor-index">
                 <div class="carrusel">
