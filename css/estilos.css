@@ -122,10 +122,44 @@ img {
     margin: 0;
     padding: 0;
 }
-#desplegable{
+
+/* Ocultar checkbox */
+#activar-menu {
     display: none;
-    position: absolute;
+}
+
+
+/* Icono del menú */
+#activar-menu + label {
+    position: relative;
+    cursor: pointer;
+}
+
+#activar-menu + label p{
+    bottom: 43px;
     margin: 0;
+
+}
+
+/* Ocultar los iconos cuando el menú esté activado */
+.menu ul:has(#activar-menu:checked) > li:not(:last-child) {
+    display: none;
+}
+
+#desplegable{
+    display:none;
+    position:absolute;
+    margin:0;
+    list-style:none;
+}
+
+#desplegable h3 {
+    margin:0;
+    margin-top: 20px;
+}
+
+#desplegable img:last-of-type {
+    margin-bottom: 35px;
 }
 .icon-header:hover  #desplegable{
     display: flex;
@@ -189,6 +223,7 @@ img {
 
 #hover-desplegable {
     position: relative;
+    cursor:pointer;
 }
 
 #hover-desplegable .icon-header > p {
