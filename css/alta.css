@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: #E0DAD2;
+    color: #0F0F0F;
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+
+main {
+    width: 94%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+main > h1 {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    font-size: 1.8rem;
+    color: #0F0F0F;
+    font-weight: 600;
+}
+
+.Logo {
+    width: 94%;
+    max-width: 1200px;
+    margin: 45px auto -48px auto;
+    padding-left: 40px;
+    position: relative;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.Logo img {
+    width: 60px;
+    height: 30px;
+    background-color: #C6A780;
+    border-radius: 4px;
+    display: block;
+}
+
+header {
+    width: 94%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #522F1C;
+    border-radius: 16px 16px 0 0;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+header > h1 {
+    display: none;
+}
+
+header section {
+    padding-left: 125px;
+}
+
+.Menu {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.Menu a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.Menu a:hover {
+    opacity: 0.85;
+}
+
+form {
+    background-color: #FFFFFF;
+    border: 1.5px solid #C6A780;
+    border-top: none;
+    border-radius: 0 0 24px 24px;
+    padding: 45px 65px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.07);
+    
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    grid-template-areas:
+        "nombre   codigo"
+        "imagen   categoria"
+        "imagen   plataforma"
+        "imagen   unidades"
+        "imagen   precio"
+        "ubicacion ubicacion"
+        "botones  botones";
+    gap: 18px 45px;
+    align-items: center;
+}
+
+label {
+    color: #522F1C;
+    font-size: 1.1rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #C6A780;
+    border-radius: 9px;
+    background-color: #FFFFFF;
+    color: #0F0F0F;
+    font-size: 1.05rem;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: #522F1C;
+}
+
+.campo-nombre {
+    grid-area: nombre;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.campo-nombre input {
+    max-width: 320px;
+}
+
+.zona-imagen {
+    grid-area: imagen;
+    border: 1px solid #C6A780;
+    border-radius: 18px;
+    background-color: #FFFFFF;
+    box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    min-height: 310px;
+    position: relative;
+}
+
+.zona-imagen label {
+    display: none;
+}
+
+.zona-imagen input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.campo-codigo { grid-area: codigo; }
+.campo3 { grid-area: categoria; }
+.campo-plataforma { grid-area: plataforma; }
+.campo-unidades { grid-area: unidades; }
+.campo-precio { grid-area: precio; }
+
+.campo-codigo,
+.campo3,
+.campo-plataforma,
+.campo-unidades,
+.campo-precio {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+}
+
+.campo-codigo label,
+.campo3 label,
+.campo-plataforma label,
+.campo-unidades label,
+.campo-precio label {
+    text-align: right;
+}
+
+.campo-codigo input,
+.campo3 select,
+.campo-plataforma select,
+.campo-unidades input,
+.campo-precio input {
+    width: 270px;
+}
+
+.campo-precio {
+    position: relative;
+}
+
+.campo-precio::after {
+    content: "€";
+    position: absolute;
+    right: 14px;
+    color: #C6A780;
+    font-size: 1.05rem;
+    pointer-events: none;
+}
+
+.campo-precio input {
+    padding-right: 30px;
+}
+
+.campo-ubicacion {
+    grid-area: ubicacion;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 12px;
+}
+
+.campo-ubicacion input {
+    flex: 1;
+}
+
+.botones {
+    grid-area: botones;
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.boton-principal {
+    background: linear-gradient(180deg, #D48842 0%, #A86226 100%);
+    color: #FFFFFF;
+    border: 1px solid #C6A780;
+    border-radius: 10px;
+    padding: 13px 85px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+    transition: transform 0.25s ease, filter 0.25s ease, box-shadow 0.25s ease;
+}
+
+.boton-principal:hover {
+    transform: scale(1.08);
+    filter: brightness(1.1);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.boton-principal:active {
+    transform: scale(1.02);
+}
