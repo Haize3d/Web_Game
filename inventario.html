@@ -18,31 +18,19 @@
                 <div class="menu">
                     <ul>
                         <li id="hover-desplegable">
-                            <span class="icon-header">
+                            <a class="icon-header" href="catalogo.html" aria-label="Ir al catálogo">
                                 <img src="img/catalogo.svg" alt="Catálogo">
                                 <p>Catálogo</p>
-                                <ul id="desplegable">
+                            </a>
+                            <ul id="desplegable">
                                     <li><h3><a href="catalogo.html">Catálogo</a></h3></li>
-                                    <hr>
-                                    <li>Consolas y videojuegos</li>
-                                    <img src="img/consola-videojuegos.svg" alt="consola-videojuegos">
-                                    <hr>
-                                    <li>PlayStation</li>
-                                    <img src="img/PlayStation.svg" alt="PlayStation">
-                                    <hr>
-                                    <li>PC Gaming</li>
-                                    <img src="img/computadora.svg" alt="PC Gaming">
-                                    <hr>
-                                    <li>Xbox</li>
-                                    <img src="img/Xbox.svg" alt="Xbox">
-                                    <hr>
-                                    <li>Televisores</li>
-                                    <img src="img/televisor.svg" alt="Televisores">
-                                    <hr>
-                                    <li>Auriculares</li>
-                                    <img src="img/auriculares.svg" alt="Auriculares">
-                                </ul>
-                            </span>
+                                    <li><a href="catalogo.html#categoria-consolas">Consolas y videojuegos</a><img src="img/consola-videojuegos.svg" alt=""></li>
+                                    <li><a href="catalogo.html#categoria-playstation">PlayStation</a><img src="img/PlayStation.svg" alt=""></li>
+                                    <li><a href="catalogo.html#categoria-pc-gaming">PC Gaming</a><img src="img/computadora.svg" alt=""></li>
+                                    <li><a href="catalogo.html#categoria-xbox">Xbox</a><img src="img/Xbox.svg" alt=""></li>
+                                    <li><a href="catalogo.html#categoria-televisores">Televisores</a><img src="img/televisor.svg" alt=""></li>
+                                    <li><a href="catalogo.html#categoria-auriculares">Auriculares</a><img src="img/auriculares.svg" alt=""></li>
+                            </ul>
                         </li>
                         <li>
                             <a href="inventario.html" id="icono-inventario" aria-current="page">
@@ -126,7 +114,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr id="producto-001">
                             <td>001</td>
                             <td>MSI Cyborg 15 Gaming</td>
                             <td>Ordenadores</td>
@@ -134,7 +122,7 @@
                             <td>12</td>
                             <td>Por asignar</td>
                         </tr>
-                        <tr>
+                        <tr id="producto-002">
                             <td>002</td>
                             <td>GamePC Pro-A RTX 5060 Ti</td>
                             <td>Ordenadores</td>
@@ -142,7 +130,7 @@
                             <td>8</td>
                             <td>Por asignar</td>
                         </tr>
-                        <tr>
+                        <tr id="producto-003">
                             <td>003</td>
                             <td>Stellar Blade Complete Steelbook Edition</td>
                             <td>Software</td>
@@ -150,7 +138,7 @@
                             <td>2</td>
                             <td>Por asignar</td>
                         </tr>
-                        <tr>
+                        <tr id="producto-004">
                             <td>004</td>
                             <td>GAME Racing Pro GT320</td>
                             <td>Accesorios</td>
@@ -158,7 +146,7 @@
                             <td>5</td>
                             <td>Por asignar</td>
                         </tr>
-                        <tr>
+                        <tr id="producto-005">
                             <td>005</td>
                             <td>Fire Emblem Fortune's Weave</td>
                             <td>Software</td>
@@ -166,7 +154,7 @@
                             <td>3</td>
                             <td>Por asignar</td>
                         </tr>
-                        <tr>
+                        <tr id="producto-006">
                             <td>006</td>
                             <td>Auriculares gaming inalámbricos</td>
                             <td>Accesorios</td>
@@ -174,7 +162,7 @@
                             <td>0</td>
                             <td>Por asignar</td>
                         </tr>
-                        <tr>
+                        <tr id="producto-007">
                             <td>007</td>
                             <td>Xbox Series X</td>
                             <td>Consolas y videojuegos</td>
@@ -182,7 +170,7 @@
                             <td>6</td>
                             <td>Por asignar</td>
                         </tr>
-                        <tr>
+                        <tr id="producto-008">
                             <td>008</td>
                             <td>Televisor gaming 4K 55&quot;</td>
                             <td>Televisores</td>
@@ -196,8 +184,42 @@
             <a class="boton-anadir-producto" href="alta.html">Añadir producto</a>
         </main>
 
-        <footer class="pie-catalogo">
-            <p>GAME · Gestión de almacén</p>
+        <footer>
+            <div class="primera-zona">
+                <div class="contenedor-logo-footer">
+                    <div class="titulo-logo-footer">
+                        <img src="img/logo-grupal.png" alt="Logo provisional" id="imagen-logo-footer">
+                        <h2>Gestor de almacén</h2>
+                    </div>
+                    <p>Gestión de productos y control de inventario.</p>
+                </div>
+                <hr>
+                <div class="segunda-zona">
+                    <div class="navegacion-footer">
+                        <h2>Navegación</h2>
+                        <a href="index.html">Inicio</a>
+                        <a href="catalogo.html">Catálogo</a>
+                        <a href="inventario.html">Inventario</a>
+                        <a href="alta.html">Alta de productos</a>
+                    </div>
+                    <div class="informacion-footer">
+                        <h2>Información</h2>
+                        <p>Proyecto enfocado en la gestión de almacenes, facilitando el control, la organización y la administración de productos.</p>
+                    </div>
+                    <div class="creditos-footer">
+                        <h2>Créditos</h2>
+                        <p>Ander Fulgencio</p>
+                        <p>Eneko Martín</p>
+                        <p>Arkaitz Jiménez</p>
+                        <p>Aimar Sandoval</p>
+                        <p>Haizea Muñoz</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="copyright-footer">
+                    <p>© 2026 Gestor de almacén. Todos los derechos reservados</p>
+                </div>
+            </div>
         </footer>
     </body>
 </html>

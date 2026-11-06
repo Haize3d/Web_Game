@@ -1035,12 +1035,29 @@ span{
 }
 
 .tarjeta-producto {
+    position: relative;
     display: flex;
     flex-direction: column;
     min-width: 0;
     overflow: hidden;
     animation: entrada-tarjeta 0.4s ease both;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.producto-detalles h2 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.producto-detalles h2 a::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+}
+
+.producto-detalles h2 a:focus-visible::after {
+    outline: 3px solid var(--color_marca);
+    outline-offset: 3px;
 }
 
 .tarjeta-producto:hover,
@@ -1157,6 +1174,119 @@ span{
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* footer */
+footer {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: var(--color_marca);
+    color: var(--resaltado_areas);
+    margin-top: 24px;
+    padding: 16px;
+}
+
+/* Primera zona: Logo y descripción */
+.primera-zona {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contenedor-logo-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.titulo-logo-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.titulo-logo-footer h2 {
+    margin: 0;
+    color: var(--resaltado_areas);
+}
+
+#imagen-logo-footer {
+    width: 5vw;
+    border-radius: 50%;
+    height: auto;
+}
+
+.contenedor-logo-footer p {
+    margin: 0;
+}
+
+/* Separadores */
+.primera-zona hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid var(--resaltado_iconos);
+}
+
+/* Segunda zona: Navegación e información */
+.segunda-zona {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 24px;
+}
+
+.navegacion-footer,
+.informacion-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.informacion-footer p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 280px;
+}
+
+.segunda-zona h2 {
+    margin: 0 0 2px;
+    color: var(--resaltado_areas);
+}
+
+.segunda-zona a {
+    color: var(--resaltado_areas);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.segunda-zona a:hover {
+    color: var(--resaltado_iconos);
+}
+
+.creditos-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.creditos-footer h2 {
+    margin: 0 0 2px;
+}
+
+.creditos-footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Copyright */
+.copyright-footer {
+    text-align: center;
+}
+
+.copyright-footer p {
+    margin: 0;
+    padding-top: 24px;
 }
 
 .pie-pagina {
