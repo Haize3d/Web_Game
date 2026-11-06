@@ -675,7 +675,26 @@ img {
     right: -60px;
     top: -12px;
     margin: -10px;
+
+    transition: background 0.3s ease, background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
+
+@keyframes latido{
+    from{transform: scale(1);}
+    to{transform: scale(1.15);}
+}
+
+@keyframes fundido{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+        background: linear-gradient(to right, var(--color_marca), var(--color_marca) 30%, var(--morado_descuento))}
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+        background: linear-gradient(to right, var(--morado_descuento)70%, var(--color_marca) 30%, var(--color_marca));}
+}
+
 #etiqueta-descuento:hover{
     background: var(--morado_descuento);
 }
@@ -1230,15 +1249,13 @@ img {
     }
 }
 
-<<<<<<< HEAD
 .boton {
     padding: 24px;
     background: var(--degr_boton);
     border: none;
     border-radius: 8px;
     color: var(--resaltado_areas);
-=======
+}
 .boton_add{
     margin-bottom: 2%;
->>>>>>> 5a7299ffa56ac31df8420e4798f8991f691d937a
 }
