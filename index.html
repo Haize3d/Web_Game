@@ -9,30 +9,104 @@
         <header>
             <div class="encabezado">
                 <div href="index.html" id="contenedor-logo">
-                    <img src="img/logo-provisional.png" alt="Logo provisional" id="imagen-logo">
+                    <img src="img/logo-grupal.png" alt="Logo provisional" id="imagen-logo">
                     <h5 class="titulo-menu">Gestor de almacén</h5>
                 </div>
 
                 <div class="menu">
                     <ul>
                         <li id="hover-desplegable">
-                            <span class="icon-header"><img src="img/catalogo.png" alt="Catálogo">
+                            <span class="icon-header"><img src="img/catalogo.svg" alt="Catálogo">
+                                <p>Catálogo</p>
                                 <ul id="desplegable">
-                                    <li><h3 href="catalogo.html">Catálogo</h3></li>
+                                    <li><h3 a href="catalogo.html">Catálogo</h3></li>
+                                    <hr>
                                     <li>Consolas y videojuegos</li>
+                                    <img src="img/consola-videojuegos.svg" alt="consola-videojuegos">
+                                    <hr>
+                                    <li>PlayStation</li>
+                                    <img src="img/PlayStation.svg" alt="PlayStation">
+                                    <hr>
                                     <li>PC Gaming</li>
-                                    <li>Informática</li>
-                                    <li>Smartphones y wearables</li>
-                                    <li>Televisores y sonido</li>
-                                    <li>Merchandising, figuras y juguetes</li>
-                                    <li>Cine y cómics</li>
+                                    <img src="img/computadora.svg" alt="PC Gaming">
+                                    <hr>
+                                    <li>Xbox</li>
+                                    <img src="img/Xbox.svg" alt="Xbox">
+                                    <hr>
+                                    <li>Televisores</li>
+                                    <img src="img/televisor.svg" alt="Televisores">
+                                    <hr>
+                                    <li>Auriculares</li>
+                                    <img src="img/auriculares.svg" alt="Auriculares">
                                 </ul>
                             </span>
                         </li>
-                        <li><a href="inventario.html"><img src="img/inventario.png" alt="Inventario"></a><p>Inventario</p></li>
-                        <li><a href="alta.html"><img src="img/alta.png" alt="Altas"></a><p>Alta</p></li>
-                        <li><a href="#"><img src="img/menu.png" alt="Menú"></a><p>Menú</p></li>
-                        <li><a href="#"><img src="img/informacion.png" alt="Información"></a><p>Información</p></li>
+                        <li><a href="inventario.html" id="icono-inventario"><img src="img/inventario.svg" alt="Inventario"></a><p>Inventario</p></li>
+                        <li><a href="alta.html" id="icono-alta"><img src="img/alta.svg" alt="Altas"></a><p>Alta</p></li>
+                        <li class="elemento-informacion"><a href="#" id="icono-informacion"><img src="img/informacion.svg" alt="Información"></a>
+                            <p>Información</p>
+                            <div class="popup-informacion">
+                                <div class="titulo-imagen" id="logo-grupal">
+                                    <h2>Gestor de almacén</h2>
+                                    <img src="img/logo-grupal.png" alt="Logo provisional">
+                                </div>
+
+                                <hr>
+
+                                <h3>Todo tu almacén, bajo control</h3>
+                                <p>
+                                    Selecciona los productos que quieras y gestiona tu almacén fácilmente. Consulta sus detalles, revisa las existencias y descubre todo lo que necesitas.
+                                </p>
+
+                                <hr>
+
+                                <h3>Funciones principales</h3>
+
+                                <hr>
+
+                                <div class="titulo-imagen">
+                                    <h4>01. Catálogo</h4>
+                                    <img src="img/catalogo.svg" alt="Catálogo">
+                                </div>
+                                <p>Consulta de productos - Productos en cuadrícula con filtros y asignación.</p>
+                    
+                                <hr>
+
+                                <div class="titulo-imagen">
+                                    <h4>02. Inventario</h4>
+                                    <img src="img/inventario.svg" alt="Inventario">
+                                </div>
+                                <p>Busqueda de productos - Estado de cada producto por fila y detalle emergente.</p>
+
+                                <hr>
+
+                                <div class="titulo-imagen">
+                                    <h4>03. Altas</h4>
+                                    <img src="img/alta.svg" alt="Altas">
+                                </div>
+                                <p>Alta de productos - Registro de productos para añadirlos a la carretilla de compra.</p>
+
+                                <hr>
+
+                                <div class="titulo-imagen">
+                                    <h4>03. Menú</h4>
+                                    <img src="img/menu.svg" alt="Menú">
+                                </div>
+                                <p>Ocultar iconos del encabezado - Mostrar iconos al volver a pulsar el menú.</p>
+
+                                <hr>
+
+                                <h3>Créditos</h3>
+                                <p>Ander Fulgencio, Eneko Martín, Arkaitz Jiménez, Aimar Sandoval y Haizea Munoz.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="activar-menu">
+                            <label for="activar-menu">
+                                <img src="img/menu.svg" alt="Menú">
+                                <p>Menú</p>
+                            </label>
+                        </li>
                     </ul>
                 </div>
         </header>
@@ -73,9 +147,10 @@
             </div>
             <div class="contenedor" id="contenedor-index">
                 <div class="tarjeta-de-producto">
+                    <div class="etiqueta" id="etiqueta-descuento">DESCUENTO</div>
                     <a class="categoria_producto" id="tarjeta_categoria">PC hardware</a>
                     <div class="fondo_producto">
-                        <img class="img_producto" id="tarjeta_img"src="https://media.game.es/COVERV2/3D_L/V1I/V1IN8O.png"/>
+                        <img class="img_producto" id="tarjeta_img"src="img/producto1.png"/>
                     </div>
                     <p class="nombre_producto" id="tarjeta_nombre">MSI Cyborg 15 Intel Core 7-240H/32Gb/1Tb/RTX 5060 - 15.6´´ 144Hz - FreeDos - Ordenador Portatil Gaming</p>
                     <p class="precio_producto" id="tarjeta_precio">1299'99€</p>
@@ -83,44 +158,46 @@
                     <a class="puntos_producto" id="taejeta_puntos">Puntos: 7800</a>
                 </div>
                 <div class="tarjeta-de-producto">
-                    <a class="categoria_producto" id="tarjeta_categoria">PC hardware</a>
+                    <div class="etiqueta" id="etiqueta-descuento">DESCUENTO</div>
+                    <a class="categoria_producto" id="tarjeta_categoria">ORDENADORES</a>
                     <div class="fondo_producto">
-                        <img class="img_producto" id="tarjeta_img"src="https://media.game.es/COVERV2/3D_L/V1I/V1IN8O.png"/>
+                        <img class="img_producto" id="tarjeta_img"src="img/producto2.png"/>
                     </div>
-                    <p class="nombre_producto" id="tarjeta_nombre">MSI Cyborg 15 Intel Core 7-240H/32Gb/1Tb/RTX 5060 - 15.6´´ 144Hz - FreeDos - Ordenador Portatil Gaming</p>
-                    <p class="precio_producto" id="tarjeta_precio">1299'99€</p>
+                    <p class="nombre_producto" id="tarjeta_nombre">GamePc Pro-A Amd R5-5500/32Gb/1Tb/Rtx 5060Ti/750W/ref Liq. 240/FresDos. W11 sin</p>
+                    <p class="precio_producto" id="tarjeta_precio">1499'99€</p>
                     <button class="comprar_boton" id="tarjeta_comprar">Comprar</button>
-                    <a class="puntos_producto" id="taejeta_puntos">Puntos: 7800</a>
+                    <a class="puntos_producto" id="taejeta_puntos">Puntos: 9000</a>
                 </div>
                 <div class="tarjeta-de-producto">
-                    <a class="categoria_producto" id="tarjeta_categoria">PC hardware</a>
+                    <a class="categoria_producto" id="tarjeta_categoria">SOFTWARE</a>
                     <div class="fondo_producto">
-                        <img class="img_producto" id="tarjeta_img"src="https://media.game.es/COVERV2/3D_L/V1I/V1IN8O.png"/>
+                        <img class="img_producto" id="tarjeta_img"src="img/producto3.png"/>
                     </div>
-                    <p class="nombre_producto" id="tarjeta_nombre">MSI Cyborg 15 Intel Core 7-240H/32Gb/1Tb/RTX 5060 - 15.6´´ 144Hz - FreeDos - Ordenador Portatil Gaming</p>
-                    <p class="precio_producto" id="tarjeta_precio">1299'99€</p>
+                    <p class="nombre_producto" id="tarjeta_nombre">Stellar Blade Complete Steelbook Edition</br></br></br></p>
+                    <p class="precio_producto" id="tarjeta_precio">69'99€</p>
                     <button class="comprar_boton" id="tarjeta_comprar">Comprar</button>
-                    <a class="puntos_producto" id="taejeta_puntos">Puntos: 7800</a>
+                    <a class="puntos_producto" id="taejeta_puntos">Puntos: 420</a>
                 </div>
                 <div class="tarjeta-de-producto">
-                    <a class="categoria_producto" id="tarjeta_categoria">PC hardware</a>
+                    <a class="categoria_producto" id="tarjeta_categoria">ACCESORIOS</a>
                     <div class="fondo_producto">
-                        <img class="img_producto" id="tarjeta_img"src="https://media.game.es/COVERV2/3D_L/V1I/V1IN8O.png"/>
+                        <img class="img_producto" id="tarjeta_img"src="img/producto4.png"/>
                     </div>
-                    <p class="nombre_producto" id="tarjeta_nombre">MSI Cyborg 15 Intel Core 7-240H/32Gb/1Tb/RTX 5060 - 15.6´´ 144Hz - FreeDos - Ordenador Portatil Gaming</p>
-                    <p class="precio_producto" id="tarjeta_precio">1299'99€</p>
+                    <p class="nombre_producto" id="tarjeta_nombre">GAME Racing Pro GT320 Negro-Rojo - Silla Gaming</br></br></br></p>
+                    <p class="precio_producto" id="tarjeta_precio">149'99€</p>
                     <button class="comprar_boton" id="tarjeta_comprar">Comprar</button>
-                    <a class="puntos_producto" id="taejeta_puntos">Puntos: 7800</a>
+                    <a class="puntos_producto" id="taejeta_puntos">Puntos: 900</a>
                 </div>
                 <div class="tarjeta-de-producto">
-                    <a class="categoria_producto" id="tarjeta_categoria">PC hardware</a>
+                    <div class="etiqueta" id="etiqueta-descuento">DESCUENTO</div>
+                    <a class="categoria_producto" id="tarjeta_categoria">SOFTWARE</a>
                     <div class="fondo_producto">
-                        <img class="img_producto" id="tarjeta_img"src="https://media.game.es/COVERV2/3D_L/V1I/V1IN8O.png"/>
+                        <img class="img_producto" id="tarjeta_img"src="img/producto5.png"/>
                     </div>
-                    <p class="nombre_producto" id="tarjeta_nombre">MSI Cyborg 15 Intel Core 7-240H/32Gb/1Tb/RTX 5060 - 15.6´´ 144Hz - FreeDos - Ordenador Portatil Gaming</p>
-                    <p class="precio_producto" id="tarjeta_precio">1299'99€</p>
+                    <p class="nombre_producto" id="tarjeta_nombre">Fire Emblem Fortune´s Weave Nintendo Switch 2</br></br></br></p>
+                    <p class="precio_producto" id="tarjeta_precio">79'99€</p>
                     <button class="comprar_boton" id="tarjeta_comprar">Comprar</button>
-                    <a class="puntos_producto" id="taejeta_puntos">Puntos: 7800</a>
+                    <a class="puntos_producto" id="taejeta_puntos">Puntos: 480</a>
                 </div>
             </div>
         </main>
