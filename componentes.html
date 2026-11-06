@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+    </head>
+    <body>
+        <header></header>
+        <main>
+            <button>Principal</button>
+            <button class="boton-secundario">Secundario</button>
+            <div class="contenedor" id="contenedor-etiquetas">
+                <a class="etiqueta" id="stock">En stock</a>
+                <a class="etiqueta" id="bajo">Stock bajo</a>
+                <a class="etiqueta" id="agotado">Agotado</a>
+            </div>
+            <div class="contenedor" id="contenedor-formulario">
+                <form>
+                    <span class="inputs">
+                        <label id="label_nombre">Nombre:</label>
+                        <input type="text" class="input_nombre" id="input_nombre" value="_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"/>
+                    </span>
+                    <div class="input_detalles">
+                        <input type="file" class="input_imagen" id="input_imagen"/>
+                        <div class="input_descripcion">
+                            <span class="inputs">
+                                <label>Categoría:</label>
+                                <input type="text" class="input_categoria" id="input_categoria" value="_ _ _ _ _ _ _ _ _ _ _ _ _"/>
+                            </span>
+                            <span class="inputs">
+                                <label>Plataforma:</label>
+                                <input type="text" class="input_plataforma" id="input_plataforma" value="_ _ _ _ _ _ _ _ _ _ _ _ _"/>
+                            </span>
+                            <span class="inputs">
+                                <label>Unidades:</label>
+                                <input type="number" class="input_unidades" id="input_unidades" value="0"/>
+                            </span>
+                            <span class="inputs">
+                                <label>Precio:</label>
+                                <input type="number" class="input_precio" id="input_precio" value="00.00"/>
+                            </span>
+                        </div>
+                    </div>
+                    <button id="boton_formulario">Añadir</button>
+                </form>
+            </div>
+            <div class="contenedor" id="contenedor-productos">
+                <div class="tarjeta-de-producto">
+                    <a class="categoria_producto" id="tarjeta_categoria">PC hardware</a>
+                    <div class="fondo_producto">
+                        <img class="img_producto" id="tarjeta_img"src="https://media.game.es/COVERV2/3D_L/V1I/V1IN8O.png"/>
+                    </div>
+                    <p class="nombre_producto" id="tarjeta_nombre">MSI Cyborg 15 Intel Core 7-240H/32Gb/1Tb/RTX 5060 - 15.6´´ 144Hz - FreeDos - Ordenador Portatil Gaming</p>
+                    <p class="precio_producto" id="tarjeta_precio">1299 99€</p>
+                    <button class="comprar_boton" id="tarjeta_comprar">Comprar</button>
+                    <a class="puntos_producto" id="taejeta_puntos">Puntos: 7800</a>
+                </div>
+                <div class="tarjeta-de-producto">
+                    <a class="categoria_producto" id="tarjeta_categoria">PC hardware</a>
+                    <div class="fondo_producto">
+                        <img class="img_producto" id="tarjeta_img"src="https://media.game.es/COVERV2/3D_L/V1I/V1IN8O.png"/>
+                    </div>
+                    <p class="nombre_producto" id="tarjeta_nombre">MSI Cyborg 15 Intel Core 7-240H/32Gb/1Tb/RTX 5060 - 15.6´´ 144Hz - FreeDos - Ordenador Portatil Gaming</p>
+                    <p class="precio_producto" id="tarjeta_precio">1299'99€</p>
+                    <button class="comprar_boton" id="tarjeta_comprar">Comprar</button>
+                    <a class="puntos_producto" id="taejeta_puntos">Puntos: 7800</a>
+                </div>
+            </div>
+            <!--div class="contenedor" id="contenedor-productos">
+                <div class="tarjeta-de-producto">
+                    <div class="fondo_producto">
+                        <img class="img_producto" id="tarjeta_img"src="https://media.game.es/COVERV2/3D_L/V1I/V1IN8O.png"/>
+                    </div>
+                    <div class="tarjeta_p_descripcion">
+                        <p class="nombre_producto" id="tarjeta_nombre">MSI Cyborg 15 Intel Core 7-240H/32Gb/1Tb/RTX 5060 - 15.6´´ 144Hz - FreeDos - Ordenador Portatil Gaming</p>
+                        <div class="tarjeta_p_datos">
+                            <div class="tarjeta_p_detalles">
+                                <a class="categoria_producto" id="tarjeta_categoria">PC hardware</a>
+                                <a class="puntos_producto" id="taejeta_puntos">Puntos: 7800</a>
+                            </div>
+                            <button class="comprar_boton" id="tarjeta_comprar">1299 99€</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tarjeta-de-producto">
+                    <div class="fondo_producto">
+                        <img class="img_producto" id="tarjeta_img"src="https://media.game.es/COVERV2/3D_L/V1I/V1IN8O.png"/>
+                    </div>
+                    <div class="tarjeta_p_descripcion">
+                        <p class="nombre_producto" id="tarjeta_nombre">MSI Cyborg 15 Intel Core 7-240H/32Gb/1Tb/RTX 5060 - 15.6´´ 144Hz - FreeDos - Ordenador Portatil Gaming</p>
+                        <div class="tarjeta_p_datos">
+                            <div class="tarjeta_p_detalles">
+                                <a class="categoria_producto" id="tarjeta_categoria">PC hardware</a>
+                                <a class="puntos_producto" id="taejeta_puntos">Puntos: 7800</a>
+                            </div>
+                            <button class="comprar_boton" id="tarjeta_comprar">1299 99€</button>
+                        </div>
+                    </div>
+                </div>
+            </div-->
+        </main>
+        <footer></footer>
+    </body>
+</html>
