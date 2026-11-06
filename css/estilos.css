@@ -5,7 +5,13 @@
     --color_marca: #522F1C;
     --color_fuentes: #0F0F0F;
     --color_boton: #C38342;
-    --degr_boton: linear-gradient(to bottom, var(--color_boton), var(--color_boton) 70%, var(--resaltado_iconos))
+    --degr_boton: linear-gradient(to bottom, var(--color_boton), var(--color_boton) 70%, var(--resaltado_iconos));
+
+    --color_sombra: #522F1C40;
+    --verde_stock: #5C9B51;
+    --amarillo_bajo: #FBFF00;
+    --rojo_agotado: #FF0000;
+    --morado_descuento: #D800F4;
 }
 
 @font-face {
@@ -78,7 +84,7 @@ button:active{
     gap: 24px;
     margin: 24px;
     border-radius: 20px;
-    box-shadow: 0 4px 4px #522F1C40;
+    box-shadow: 0 4px 4px var(--color_sombra);
     overflow: hidden;
 }
 
@@ -89,7 +95,7 @@ img {
 
 /* ===== HEADER ===== */
 .encabezado {
-    background-color: #522F1C;
+    background-color: var(--color_marca);
     padding:20px;
     display:flex;
     align-items: center;
@@ -210,7 +216,7 @@ img {
 }
 
 .menu li:hover p{
-    background-color: #C6A780;
+    background-color: var(--resaltado_iconos);
     display: block;
 }
 
@@ -225,7 +231,7 @@ img {
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
-    background-color: #C6A780;
+    background-color: var(--resaltado_iconos);
     white-space: nowrap;
     z-index: 101;
 }
@@ -248,9 +254,9 @@ img {
     padding: 16px;
     background-color: var(--resaltado_areas);
     color: var(--color_fuentes);
-    border: 1px solid #D8C8B9;
+    border: 1px solid var(--resaltado_iconos);
     border-radius: 14px;
-    box-shadow: 0 8px 25px #00000030;
+    box-shadow: 0 8px 25px var(--color_sombra);
     text-align: left;
     z-index: 1000;
 }
@@ -569,14 +575,14 @@ img {
     aspect-ratio: 1 / 1.5;
     justify-content: center;
     align-items: center;
-    color: #522F1C;
+    color: var(--color_marca);
     border-radius: 12px;
 
     transition: transform 0.3s ease;
 }
 .tarjeta-de-producto:hover{
     transform: scale(1.05);
-    box-shadow: 0 5px 4px #522F1C40;
+    box-shadow: 0 5px 4px var(--color_sombra);
 }
 .fondo_producto{
     background-color: var(--resaltado_areas);
@@ -631,30 +637,30 @@ img {
     transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 #stock{
-    background: linear-gradient(to right, var(--color_marca), var(--color_marca) 70%, #5C9B51);
+    background: linear-gradient(to right, var(--color_marca), var(--color_marca) 70%, var(--verde_stock));
 }
 #stock:hover{
-    background: #5C9B51;
+    background: var(--verde_stock);
     color: var(--color_marca);
     font-weight: bold;
     transform: scale(1.1);
 }
 #bajo{
-    background: linear-gradient(to right, var(--color_marca), var(--color_marca) 50%, #FBFF00);
-    box-shadow: 0 0 5px #FBFF00 inset;
+    background: linear-gradient(to right, var(--color_marca), var(--color_marca) 50%, var(--amarillo_bajo));
+    box-shadow: 0 0 5px var(--amarillo_bajo) inset;
 }
 #bajo:hover{
-    background: #FBFF00;
+    background: var(--amarillo_bajo);
     color: var(--color_marca);
     font-weight: bold;
     transform: scale(1.1);
 }
 #agotado{
-    background: linear-gradient(to right, var(--color_marca), var(--color_marca) 30%, #FF0000);
-    box-shadow: 0 0 18px #FF0000 inset;
+    background: linear-gradient(to right, var(--color_marca), var(--color_marca) 30%, var(--rojo_agotado));
+    box-shadow: 0 0 18px var(--rojo_agotado) inset;
 }
 #agotado:hover{
-    background: #FF0000;
+    background: var(--rojo_agotado);
     color: var(--color_marca);
     font-weight: bold;
     transform: scale(1.1);
@@ -664,14 +670,14 @@ img {
 }
 #etiqueta-descuento{
     position: relative;
-    background: linear-gradient(to right, var(--color_marca), var(--color_marca) 30%, #D800F4);
-    box-shadow: 0 0 18px #D800F4 inset;
+    background: linear-gradient(to right, var(--color_marca), var(--color_marca) 30%, var(--morado_descuento));
+    box-shadow: 0 0 18px var(--morado_descuento) inset;
     right: -60px;
     top: -12px;
     margin: -10px;
 }
 #etiqueta-descuento:hover{
-    background: #D800F4;
+    background: var(--morado_descuento);
 }
 
 /* ===== FORMULARIO ===== */
@@ -801,7 +807,7 @@ button:active{
     gap: 24px;
     margin: 24px;
     border-radius: 20px;
-    box-shadow: 0 4px 4px #522F1C40;
+    box-shadow: 0 4px 4px var(--color_sombra);
 } 
 
 /* ===== COMPONENTES ===== */
@@ -816,14 +822,14 @@ width: 60vw;
     aspect-ratio: 1 / 1.5;
     justify-content: center;
     align-items: center;
-    color: #522F1C;
+    color: var(--color_marca);
     border-radius: 12px;
 
     transition: transform 0.3s ease;
 }
 .tarjeta-de-producto:hover{
     transform: scale(1.05);
-    box-shadow: 0 5px 4px #522F1C40;
+    box-shadow: 0 5px 4px var(--color_sombra);
 }
 .fondo_producto{
     background-color: var(--resaltado_areas);
@@ -877,32 +883,32 @@ width: 60vw;
     transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 #stock{
-    background: linear-gradient(to right, var(--color_marca), var(--color_marca) 70%, #5C9B51);
+    background: linear-gradient(to right, var(--color_marca), var(--color_marca) 70%, var(--verde_stock));
 }
 
 #stock:hover{
-    background: #5C9B51;
+    background: var(--verde_stock);
     color: var(--color_marca);
     font-weight: bold;
     transform: scale(1.1);
 }
   
 #bajo{
-    background: linear-gradient(to right, var(--color_marca), var(--color_marca) 50%, #FBFF00);
-    box-shadow: 0 0 5px #FBFF00 inset;
+    background: linear-gradient(to right, var(--color_marca), var(--color_marca) 50%, var(--amarillo_bajo));
+    box-shadow: 0 0 5px var(--amarillo_bajo) inset;
 }
 #bajo:hover{
-    background: #FBFF00;
+    background: var(--amarillo_bajo);
     color: var(--color_marca);
     font-weight: bold;
     transform: scale(1.1);
 }
 #agotado{
-    background: linear-gradient(to right, var(--color_marca), var(--color_marca) 30%, #FF0000);
-    box-shadow: 0 0 18px #FF0000 inset;
+    background: linear-gradient(to right, var(--color_marca), var(--color_marca) 30%, var(--rojo_agotado));
+    box-shadow: 0 0 18px var(--rojo_agotado) inset;
 }
 #agotado:hover{
-    background: #FF0000;
+    background: var(--rojo_agotado);
     color: var(--color_marca);
     font-weight: bold;
     transform: scale(1.1);
