@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Gestor de almacén</title>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="css/estilos.css"/>
-    <link rel="stylesheet" href="css/alta.css"/>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/alta.css" />
     <link rel="icon" href="img/favicon.ico">
 
     <style>
-        body > header {
+        body>header {
             width: 100%;
             max-width: none;
             height: auto;
@@ -120,29 +121,29 @@
                 max-width: 100%;
             }
         }
-        main > h1 {
-    position: static;
-    margin: 25px 0;
-}
 
-    .encabezado {
-        padding: 8px 20px;
-    }
+        main>h1 {
+            position: static;
+            margin: 25px 0;
+        }
 
-    #imagen-logo {
-        width: 55px;
-        height: auto;
-    }
+        .encabezado {
+            padding: 8px 20px;
+        }
 
-    .titulo-menu {
-        margin-top: 5px;
-    }
+        #imagen-logo {
+            width: 55px;
+            height: auto;
+        }
 
-    .menu li {
-        width: 65px;
-        height: 65px;
-    }
+        .titulo-menu {
+            margin-top: 5px;
+        }
 
+        .menu li {
+            width: 65px;
+            height: 65px;
+        }
     </style>
 </head>
 
@@ -158,38 +159,33 @@
             <div class="menu">
                 <ul>
                     <li id="hover-desplegable">
-                        <span class="icon-header">
-                            <img src="img/catalogo.svg" alt="Catálogo">
+                        <a class="icon-header" href="catalogo.html" aria-label="Ir al catálogo">
+                            <img src="img/catalogo.svg" alt="">
                             <p>Catálogo</p>
+                        </a>
+                        <ul id="desplegable">
+                            <li>
+                                <h3><a href="catalogo.html">Catálogo</a></h3>
+                            </li>
+                            <hr>
 
-                            <ul id="desplegable">
-                                <li><h3><a href="catalogo.html">Catálogo</a></h3></li>
-                                <hr>
+                            <li><a href="catalogo.html#categoria-consolas">Consolas y videojuegos</a><img src="img/consola-videojuegos.svg" alt=""></li>
+                            <hr>
 
-                                <li>Consolas y videojuegos</li>
-                                <img src="img/consola-videojuegos.svg" alt="consola-videojuegos">
-                                <hr>
+                            <li><a href="catalogo.html#categoria-playstation">PlayStation</a><img src="img/PlayStation.svg" alt=""></li>
+                            <hr>
 
-                                <li>PlayStation</li>
-                                <img src="img/PlayStation.svg" alt="PlayStation">
-                                <hr>
+                            <li><a href="catalogo.html#categoria-pc-gaming">PC Gaming</a><img src="img/computadora.svg" alt=""></li>
+                            <hr>
 
-                                <li>PC Gaming</li>
-                                <img src="img/computadora.svg" alt="PC Gaming">
-                                <hr>
+                            <li><a href="catalogo.html#categoria-xbox">Xbox</a><img src="img/Xbox.svg" alt=""></li>
+                            <hr>
 
-                                <li>Xbox</li>
-                                <img src="img/Xbox.svg" alt="Xbox">
-                                <hr>
+                            <li><a href="catalogo.html#categoria-televisores">Televisores</a><img src="img/televisor.svg" alt=""></li>
+                            <hr>
 
-                                <li>Televisores</li>
-                                <img src="img/televisor.svg" alt="Televisores">
-                                <hr>
-
-                                <li>Auriculares</li>
-                                <img src="img/auriculares.svg" alt="Auriculares">
-                            </ul>
-                        </span>
+                            <li><a href="catalogo.html#categoria-auriculares">Auriculares</a><img src="img/auriculares.svg" alt=""></li>
+                        </ul>
                     </li>
 
                     <li>
@@ -351,4 +347,5 @@
     <footer></footer>
 
 </body>
+
 </html>

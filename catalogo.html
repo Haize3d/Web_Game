@@ -1,104 +1,257 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Catálogo | GAME</title>
-        <link rel="stylesheet" href="css/estilos.css"/>
-    </head>
-    <body>
-        <header class="cabecera-catalogo">
-            <a class="marca-catalogo" href="index.html" aria-label="GAME, inicio">G</a>
-            <nav aria-label="Navegación principal">
-                <a href="catalogo.html" aria-current="page">Catálogo</a>
-                <a href="inventario.html">Inventario</a>
-                <a href="alta.html">Altas</a>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Catálogo | Gestor de almacén</title>
+    <link rel="stylesheet" href="css/estilos.css"/>
+</head>
+<body>
+    <header>
+        <div class="encabezado">
+            <a href="index.html" id="contenedor-logo" aria-label="Volver al inicio">
+                <img src="img/logo-grupal.png" alt="" id="imagen-logo">
+                <h5 class="titulo-menu">Gestor de almacén</h5>
+            </a>
+
+            <nav class="menu" aria-label="Navegación principal">
+                <ul>
+                    <li id="hover-desplegable">
+                        <a class="icon-header" href="catalogo.html" aria-current="page">
+                            <img src="img/catalogo.svg" alt="">
+                            <p>Catálogo</p>
+                        </a>
+                        <ul id="desplegable">
+                            <li><h3><a href="catalogo.html">Catálogo</a></h3></li>
+                            <li><a href="catalogo.html#categoria-consolas">Consolas y videojuegos</a><img src="img/consola-videojuegos.svg" alt=""></li>
+                            <li><a href="catalogo.html#categoria-playstation">PlayStation</a><img src="img/PlayStation.svg" alt=""></li>
+                            <li><a href="catalogo.html#categoria-pc-gaming">PC Gaming</a><img src="img/computadora.svg" alt=""></li>
+                            <li><a href="catalogo.html#categoria-xbox">Xbox</a><img src="img/Xbox.svg" alt=""></li>
+                            <li><a href="catalogo.html#categoria-televisores">Televisores</a><img src="img/televisor.svg" alt=""></li>
+                            <li><a href="catalogo.html#categoria-auriculares">Auriculares</a><img src="img/auriculares.svg" alt=""></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="inventario.html" id="icono-inventario">
+                            <img src="img/inventario.svg" alt="Inventario">
+                        </a>
+                        <p>Inventario</p>
+                    </li>
+                    <li>
+                        <a href="alta.html" id="icono-alta">
+                            <img src="img/alta.svg" alt="Altas">
+                        </a>
+                        <p>Alta</p>
+                    </li>
+                    <li class="elemento-informacion">
+                        <a href="#" id="icono-informacion">
+                            <img src="img/informacion.svg" alt="Información">
+                        </a>
+                        <p>Información</p>
+                        <div class="popup-informacion">
+                            <div class="titulo-imagen" id="logo-grupal">
+                                <h2>Gestor de almacén</h2>
+                                <img src="img/logo-grupal.png" alt="Logo de Gestor de almacén">
+                            </div>
+                            <hr>
+                            <h3>Todo tu almacén, bajo control</h3>
+                            <p>Selecciona los productos que quieras y gestiona tu almacén fácilmente. Consulta sus detalles, revisa las existencias y descubre todo lo que necesitas.</p>
+                            <hr>
+                            <h3>Funciones principales</h3>
+                            <hr>
+                            <div class="titulo-imagen">
+                                <h4>01. Catálogo</h4>
+                                <img src="img/catalogo.svg" alt="Catálogo">
+                            </div>
+                            <p>Consulta de productos - Productos en cuadrícula con filtros y asignación.</p>
+                            <hr>
+                            <div class="titulo-imagen">
+                                <h4>02. Inventario</h4>
+                                <img src="img/inventario.svg" alt="Inventario">
+                            </div>
+                            <p>Búsqueda de productos - Estado de cada producto por fila y detalle emergente.</p>
+                            <hr>
+                            <div class="titulo-imagen">
+                                <h4>03. Altas</h4>
+                                <img src="img/alta.svg" alt="Altas">
+                            </div>
+                            <p>Alta de productos - Registro de productos para añadirlos a la carretilla de compra.</p>
+                            <hr>
+                            <div class="titulo-imagen">
+                                <h4>04. Menú</h4>
+                                <img src="img/menu.svg" alt="Menú">
+                            </div>
+                            <p>Ocultar iconos del encabezado - Mostrar iconos al volver a pulsar el menú.</p>
+                            <hr>
+                            <h3>Créditos</h3>
+                            <p>Ander Fulgencio, Eneko Martín, Arkaitz Jiménez, Aimar Sandoval y Haizea Muñoz.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="activar-menu">
+                        <label for="activar-menu">
+                            <img src="img/menu.svg" alt="Menú">
+                            <p>Menú</p>
+                        </label>
+                    </li>
+                </ul>
             </nav>
-        </header>
+        </div>
+    </header>
 
-        <main class="pagina-catalogo">
-            <h1>Catálogo</h1>
+    <main class="catalogo-pagina">
+        <h1 class="catalogo-titulo">Catálogo</h1>
 
-            <section class="zona-filtros" aria-labelledby="titulo-filtros">
-                <h2 id="titulo-filtros">Filtros</h2>
-                <div class="filtros">
-                    <fieldset class="filtro">
-                        <legend>Categoría</legend>
-                        <label><input type="radio" name="categoria" id="categoria-todas" checked/> Todas</label>
-                        <label><input type="radio" name="categoria" id="categoria-consolas"/> Consolas</label>
-                        <label><input type="radio" name="categoria" id="categoria-videojuegos"/> Videojuegos</label>
-                        <label><input type="radio" name="categoria" id="categoria-accesorios"/> Accesorios</label>
-                    </fieldset>
+        <span class="catalogo-objetivo" id="categoria-consolas" aria-hidden="true"></span>
+        <span class="catalogo-objetivo" id="categoria-playstation" aria-hidden="true"></span>
+        <span class="catalogo-objetivo" id="categoria-pc-gaming" aria-hidden="true"></span>
+        <span class="catalogo-objetivo" id="categoria-xbox" aria-hidden="true"></span>
+        <span class="catalogo-objetivo" id="categoria-televisores" aria-hidden="true"></span>
+        <span class="catalogo-objetivo" id="categoria-auriculares" aria-hidden="true"></span>
 
-                    <fieldset class="filtro">
-                        <legend>Precio</legend>
-                        <label><input type="radio" name="precio" id="precio-todos" checked/> Todos</label>
-                        <label><input type="radio" name="precio" id="precio-hasta-75"/> Hasta 75 €</label>
-                        <label><input type="radio" name="precio" id="precio-mas-75"/> Más de 75 €</label>
-                    </fieldset>
+        <section class="catalogo-barra" aria-label="Filtros rápidos">
+            <div class="catalogo-control">
+                <label for="categoria">Categoría</label>
+                <select id="categoria" name="categoria">
+                    <option value="todas">Todas</option>
+                    <option value="hardware">Ordenadores</option>
+                    <option value="software">Software</option>
+                    <option value="accesorios">Accesorios</option>
+                </select>
+            </div>
+            <div class="catalogo-control">
+                <label for="rango-precio">Precio</label>
+                <select id="rango-precio" name="rango-precio">
+                    <option value="todos">Cualquier precio</option>
+                    <option value="menos-75">Menos de 75 €</option>
+                    <option value="75-500">75 € - 500 €</option>
+                    <option value="mas-500">Más de 500 €</option>
+                </select>
+            </div>
+        </section>
 
-                    <fieldset class="filtro">
-                        <legend>Disponibilidad</legend>
-                        <label><input type="radio" name="stock" id="stock-todo" checked/> Todos</label>
-                        <label><input type="radio" name="stock" id="stock-disponible"/> En stock</label>
-                        <label><input type="radio" name="stock" id="stock-bajo"/> Stock bajo</label>
-                        <label><input type="radio" name="stock" id="stock-agotado"/> Agotado</label>
-                    </fieldset>
+        <aside class="catalogo-filtros" aria-labelledby="titulo-filtros">
+            <h2 id="titulo-filtros">Filtros</h2>
+            <fieldset class="filtro-grupo">
+                <legend>Plataforma</legend>
+                <label><input type="radio" name="plataforma" id="plataforma-todas" checked> Todas</label>
+                <label><input type="radio" name="plataforma" id="plataforma-pc"> PC</label>
+                <label><input type="radio" name="plataforma" id="plataforma-playstation"> PlayStation</label>
+                <label><input type="radio" name="plataforma" id="plataforma-nintendo"> Nintendo Switch</label>
+                <label><input type="radio" name="plataforma" id="plataforma-xbox"> Xbox</label>
+            </fieldset>
+            <fieldset class="filtro-grupo">
+                <legend>Disponibilidad</legend>
+                <label><input type="radio" name="disponibilidad" id="stock-todos" checked> Todos</label>
+                <label><input type="radio" name="disponibilidad" id="stock-disponible"> En stock</label>
+                <label><input type="radio" name="disponibilidad" id="stock-bajo"> Stock bajo</label>
+                <label><input type="radio" name="disponibilidad" id="stock-agotado"> Agotado</label>
+            </fieldset>
+        </aside>
 
-                    <fieldset class="filtro">
-                        <legend>Plataforma</legend>
-                        <label><input type="radio" name="plataforma" id="plataforma-todas" checked/> Todas</label>
-                        <label><input type="radio" name="plataforma" id="plataforma-switch"/> Nintendo Switch</label>
-                        <label><input type="radio" name="plataforma" id="plataforma-playstation"/> PlayStation 5</label>
-                        <label><input type="radio" name="plataforma" id="plataforma-pc"/> PC</label>
-                    </fieldset>
+        <section class="catalogo-productos" id="productos" aria-label="Productos disponibles">
+            <article class="tarjeta-producto categoria-hardware categoria-pc-gaming plataforma-pc precio-mas-500 estado-stock">
+                <div class="imagen-producto">
+                    <img src="img/producto1.png" alt="Ordenador portátil MSI Cyborg 15">
                 </div>
-            </section>
-
-            <section aria-labelledby="titulo-productos">
-                <h2 id="titulo-productos">Productos</h2>
-                <div class="rejilla-productos">
-                    <article class="tarjeta-producto categoria-consolas plataforma-switch precio-mas-75 en-stock">
-                        <div class="imagen-producto" role="img" aria-label="Consola Nintendo Switch OLED">🎮</div>
-                        <h3>Nintendo Switch OLED</h3>
-                        <p>Nintendo Switch</p>
-                        <p class="precio-producto">349,99 €</p>
-                        <p class="etiqueta-stock">En stock · 12 unidades</p>
-                        <a href="inventario.html">Ver en inventario</a>
-                    </article>
-
-                    <article class="tarjeta-producto categoria-accesorios plataforma-playstation precio-hasta-75 stock-bajo">
-                        <div class="imagen-producto" role="img" aria-label="Mando inalámbrico DualSense">🎮</div>
-                        <h3>Mando inalámbrico DualSense</h3>
-                        <p>PlayStation 5</p>
-                        <p class="precio-producto">74,99 €</p>
-                        <p class="etiqueta-stock">Stock bajo · 2 unidades</p>
-                        <a href="inventario.html">Ver en inventario</a>
-                    </article>
-
-                    <article class="tarjeta-producto categoria-videojuegos plataforma-switch precio-hasta-75 en-stock">
-                        <div class="imagen-producto" role="img" aria-label="Videojuego The Legend of Zelda">🕹️</div>
-                        <h3>The Legend of Zelda: Tears of the Kingdom</h3>
-                        <p>Nintendo Switch</p>
-                        <p class="precio-producto">59,99 €</p>
-                        <p class="etiqueta-stock">En stock · 8 unidades</p>
-                        <a href="inventario.html">Ver en inventario</a>
-                    </article>
-
-                    <article class="tarjeta-producto categoria-accesorios plataforma-playstation plataforma-pc precio-mas-75 agotado">
-                        <div class="imagen-producto"><img src="img/auriculares.jpg" alt="Auriculares gaming"></div>
-                        <h3>Auriculares gaming inalámbricos</h3>
-                        <p>PlayStation 5 · PC</p>
-                        <p class="precio-producto">89,95 €</p>
-                        <p class="etiqueta-stock">Agotado</p>
-                        <a href="inventario.html">Ver en inventario</a>
-                    </article>
+                <div class="producto-detalles">
+                    <p class="producto-categoria">Ordenadores</p>
+                    <h2>MSI Cyborg 15 Gaming</h2>
+                    <p class="producto-plataforma">PC</p>
+                    <p class="producto-precio">1.299,99 €</p>
+                    <span class="etiqueta-stock">En stock · 12 unidades</span>
                 </div>
-            </section>
-        </main>
+            </article>
+            <article class="tarjeta-producto categoria-hardware categoria-pc-gaming plataforma-pc precio-mas-500 estado-stock">
+                <div class="imagen-producto">
+                    <img src="img/producto2.png" alt="Torre de ordenador GamePC Pro-A">
+                </div>
+                <div class="producto-detalles">
+                    <p class="producto-categoria">Ordenadores</p>
+                    <h2>GamePC Pro-A RTX 5060 Ti</h2>
+                    <p class="producto-plataforma">PC</p>
+                    <p class="producto-precio">1.499,99 €</p>
+                    <span class="etiqueta-stock">En stock · 8 unidades</span>
+                </div>
+            </article>
+            <article class="tarjeta-producto categoria-software categoria-consolas categoria-playstation plataforma-playstation precio-menos-75 estado-bajo">
+                <div class="imagen-producto">
+                    <img src="img/producto3.png" alt="Videojuego Stellar Blade Complete Steelbook Edition">
+                </div>
+                <div class="producto-detalles">
+                    <p class="producto-categoria">Software</p>
+                    <h2>Stellar Blade Complete Steelbook Edition</h2>
+                    <p class="producto-plataforma">PlayStation 5</p>
+                    <p class="producto-precio">69,99 €</p>
+                    <span class="etiqueta-stock etiqueta-stock-bajo">Stock bajo · 2 unidades</span>
+                </div>
+            </article>
+            <article class="tarjeta-producto categoria-accesorios plataforma-multiplataforma precio-75-500 estado-stock">
+                <div class="imagen-producto">
+                    <img src="img/producto4.png" alt="Silla gaming GAME Racing Pro GT320">
+                </div>
+                <div class="producto-detalles">
+                    <p class="producto-categoria">Accesorios</p>
+                    <h2>GAME Racing Pro GT320</h2>
+                    <p class="producto-plataforma">Multiplataforma</p>
+                    <p class="producto-precio">149,99 €</p>
+                    <span class="etiqueta-stock">En stock · 5 unidades</span>
+                </div>
+            </article>
+            <article class="tarjeta-producto categoria-software categoria-consolas plataforma-nintendo precio-75-500 estado-bajo">
+                <div class="imagen-producto">
+                    <img src="img/producto5.png" alt="Videojuego Fire Emblem Fortune's Weave">
+                </div>
+                <div class="producto-detalles">
+                    <p class="producto-categoria">Software</p>
+                    <h2>Fire Emblem Fortune's Weave</h2>
+                    <p class="producto-plataforma">Nintendo Switch 2</p>
+                    <p class="producto-precio">79,99 €</p>
+                    <span class="etiqueta-stock etiqueta-stock-bajo">Stock bajo · 3 unidades</span>
+                </div>
+            </article>
+            <article class="tarjeta-producto categoria-accesorios categoria-auriculares categoria-playstation plataforma-pc plataforma-playstation precio-75-500 estado-agotado">
+                <div class="imagen-producto">
+                    <img src="img/auriculares.jpg" alt="Auriculares gaming inalámbricos">
+                </div>
+                <div class="producto-detalles">
+                    <p class="producto-categoria">Accesorios</p>
+                    <h2>Auriculares gaming inalámbricos</h2>
+                    <p class="producto-plataforma">PlayStation 5 · PC</p>
+                    <p class="producto-precio">89,95 €</p>
+                    <span class="etiqueta-stock etiqueta-stock-agotado">Agotado</span>
+                </div>
+            </article>
+            <article class="tarjeta-producto categoria-consolas categoria-xbox plataforma-xbox precio-mas-500 estado-stock">
+                <div class="imagen-producto">
+                    <img src="img/Xbox.svg" alt="Consola Xbox Series X">
+                </div>
+                <div class="producto-detalles">
+                    <p class="producto-categoria">Consolas y videojuegos</p>
+                    <h2>Xbox Series X</h2>
+                    <p class="producto-plataforma">Xbox</p>
+                    <p class="producto-precio">549,99 €</p>
+                    <span class="etiqueta-stock">En stock · 6 unidades</span>
+                </div>
+            </article>
+            <article class="tarjeta-producto categoria-televisores plataforma-multiplataforma precio-75-500 estado-bajo">
+                <div class="imagen-producto">
+                    <img src="img/televisor.svg" alt="Televisor gaming 4K de 55 pulgadas">
+                </div>
+                <div class="producto-detalles">
+                    <p class="producto-categoria">Televisores</p>
+                    <h2>Televisor gaming 4K 55&quot;</h2>
+                    <p class="producto-plataforma">Multiplataforma</p>
+                    <p class="producto-precio">499,99 €</p>
+                    <span class="etiqueta-stock etiqueta-stock-bajo">Stock bajo · 1 unidad</span>
+                </div>
+            </article>
+        </section>
 
-        <footer class="pie-catalogo">
-            <p>GAME · Gestión de almacén</p>
-        </footer>
-    </body>
+    </main>
+
+    <footer class="pie-pagina">
+        <p>Gestor de almacén · Catálogo de productos</p>
+    </footer>
+</body>
 </html>
