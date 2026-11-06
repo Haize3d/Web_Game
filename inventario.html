@@ -1,108 +1,217 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
-        <title>Game</title>
+        <title>Inventario | GAME</title>
         <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="css/estilos.css"/>
+        <link rel="stylesheet" href="css/inventario.css"/>
     </head>
     <body>
         <header>
-            <h1>Inventario</h1>
+            <div class="encabezado">
+                <a href="index.html" id="contenedor-logo" aria-label="GAME, inicio">
+                    <img src="img/logo-grupal.png" alt="Logo provisional" id="imagen-logo">
+                    <h5 class="titulo-menu">Gestor de almacén</h5>
+                </a>
+
+                <div class="menu">
+                    <ul>
+                        <li id="hover-desplegable">
+                            <span class="icon-header">
+                                <img src="img/catalogo.svg" alt="Catálogo">
+                                <p>Catálogo</p>
+                                <ul id="desplegable">
+                                    <li><h3><a href="catalogo.html">Catálogo</a></h3></li>
+                                    <hr>
+                                    <li>Consolas y videojuegos</li>
+                                    <img src="img/consola-videojuegos.svg" alt="consola-videojuegos">
+                                    <hr>
+                                    <li>PlayStation</li>
+                                    <img src="img/PlayStation.svg" alt="PlayStation">
+                                    <hr>
+                                    <li>PC Gaming</li>
+                                    <img src="img/computadora.svg" alt="PC Gaming">
+                                    <hr>
+                                    <li>Xbox</li>
+                                    <img src="img/Xbox.svg" alt="Xbox">
+                                    <hr>
+                                    <li>Televisores</li>
+                                    <img src="img/televisor.svg" alt="Televisores">
+                                    <hr>
+                                    <li>Auriculares</li>
+                                    <img src="img/auriculares.svg" alt="Auriculares">
+                                </ul>
+                            </span>
+                        </li>
+                        <li>
+                            <a href="inventario.html" id="icono-inventario" aria-current="page">
+                                <img src="img/inventario.svg" alt="Inventario">
+                            </a>
+                            <p>Inventario</p>
+                        </li>
+                        <li>
+                            <a href="alta.html" id="icono-alta">
+                                <img src="img/alta.svg" alt="Altas">
+                            </a>
+                            <p>Alta</p>
+                        </li>
+                        <li class="elemento-informacion">
+                            <a href="#" id="icono-informacion">
+                                <img src="img/informacion.svg" alt="Información">
+                            </a>
+                            <p>Información</p>
+                            <div class="popup-informacion">
+                                <div class="titulo-imagen" id="logo-grupal">
+                                    <h2>Gestor de almacén</h2>
+                                    <img src="img/logo-grupal.png" alt="Logo provisional">
+                                </div>
+                                <hr>
+                                <h3>Todo tu almacén, bajo control</h3>
+                                <p>Selecciona los productos que quieras y gestiona tu almacén fácilmente. Consulta sus detalles, revisa las existencias y descubre todo lo que necesitas.</p>
+                                <hr>
+                                <h3>Funciones principales</h3>
+                                <hr>
+                                <div class="titulo-imagen">
+                                    <h4>01. Catálogo</h4>
+                                    <img src="img/catalogo.svg" alt="Catálogo">
+                                </div>
+                                <p>Consulta de productos - Productos en cuadrícula con filtros y asignación.</p>
+                                <hr>
+                                <div class="titulo-imagen">
+                                    <h4>02. Inventario</h4>
+                                    <img src="img/inventario.svg" alt="Inventario">
+                                </div>
+                                <p>Búsqueda de productos - Estado de cada producto por fila y detalle emergente.</p>
+                                <hr>
+                                <div class="titulo-imagen">
+                                    <h4>03. Altas</h4>
+                                    <img src="img/alta.svg" alt="Altas">
+                                </div>
+                                <p>Alta de productos - Registro de productos para añadirlos a la carretilla de compra.</p>
+                                <hr>
+                                <div class="titulo-imagen">
+                                    <h4>04. Menú</h4>
+                                    <img src="img/menu.svg" alt="Menú">
+                                </div>
+                                <p>Ocultar iconos del encabezado - Mostrar iconos al volver a pulsar el menú.</p>
+                                <hr>
+                                <h3>Créditos</h3>
+                                <p>Ander Fulgencio, Eneko Martín, Arkaitz Jiménez, Aimar Sandoval y Haizea Muñoz.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="activar-menu">
+                            <label for="activar-menu">
+                                <img src="img/menu.svg" alt="Menú">
+                                <p>Menú</p>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </header>
-        <main>
-            <table>
-                <tr>
-                    <th>Codigo</th>
-                    <th>Producto</th>
-                    <th>Categoria</th>
-                    <th>Plataforma</th>
-                    <th>Stock (ud)</th>
-                    <th>Ubicacion</th>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Teclado mecánico</td>
-                    <td>Periféricos</td>
-                    <td><img src="img/logotipo-de-playstation.svg" alt=""></td>
-                    <td>25</td>
-                    <td>Almacén A1</td>
-                </tr>
-                <tr>
-                    <td>002</td>
-                    <td>Ratón inalámbrico</td>
-                    <td>Periféricos</td>
-                    <td><img src="img/logotipo-de-xbox.svg" alt=""></td>
-                    <td>40</td>
-                    <td>Almacén A2</td>
-                </tr>
-                <tr>
-                    <td>003</td>
-                    <td>Auriculares Bluetooth</td>
-                    <td>Audio</td>
-                    <td><img src="img/logotipo-de-playstation.svg" alt=""></td>
-                    <td>18</td>
-                    <td>Almacén B1</td>
-                </tr>
-                <tr>
-                    <td>004</td>
-                    <td>Mando inalámbrico</td>
-                    <td>Accesorios gaming</td>
-                    <td><img src="img/interruptor-de-nintendo.svg" alt=""></td>
-                    <td>15</td>
-                    <td>Almacén B2</td>
-                </tr>
-                <tr>
-                    <td>005</td>
-                    <td>Cable HDMI 2.1</td>
-                    <td>Cables</td>
-                    <td>Multiplataforma</td>
-                    <td>60</td>
-                    <td>Almacén C1</td>
-                </tr>
-                <tr>
-                    <td>006</td>
-                    <td>Webcam Full HD</td>
-                    <td>Periféricos</td>
-                    <td>PC</td>
-                    <td>12</td>
-                    <td>Almacén A3</td>
-                </tr>
-                <tr>
-                    <td>007</td>
-                    <td>SSD externo 1 TB</td>
-                    <td>Almacenamiento</td>
-                    <td>Multiplataforma</td>
-                    <td>20</td>
-                    <td>Almacén C2</td>
-                </tr>
-                <tr>
-                    <td>008</td>
-                    <td>Base refrigeradora</td>
-                    <td>Accesorios</td>
-                    <td>Portátil</td>
-                    <td>10</td>
-                    <td>Almacén D1</td>
-                </tr>
-                <tr>
-                    <td>009</td>
-                    <td>Micrófono USB</td>
-                    <td>Audio</td>
-                    <td><img src="img/logotipo-de-xbox.svg" alt=""></td>
-                    <td>14</td>
-                    <td>Almacén B3</td>
-                </tr>
-                <tr>
-                    <td>010</td>
-                    <td>Cargador USB-C 65 W</td>
-                    <td>Cargadores</td>
-                    <td><img src="img/logotipo-de-playstation.svg" alt=""></td>
-                    <td>35</td>
-                    <td>Almacén D2</td>
-                </tr>
-            </table>
-            <a href="alta.html" class="boton">Añadir producto</a>
-            <button class="boton_add"><a href="alta.html">Añadir producto</a></button>
+
+        <main class="pagina-inventario">
+            <div class="tabla-inventario">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Código</th>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Categoría</th>
+                            <th scope="col">Plataforma</th>
+                            <th scope="col">Stock (ud.)</th>
+                            <th scope="col">Ubicación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>Teclado mecánico</td>
+                            <td>Periféricos</td>
+                            <td><img src="img/logotipo-de-playstation.svg" alt="PlayStation"></td>
+                            <td>25</td>
+                            <td>Almacén A1</td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>Ratón inalámbrico</td>
+                            <td>Periféricos</td>
+                            <td><img src="img/logotipo-de-xbox.svg" alt="Xbox"></td>
+                            <td>40</td>
+                            <td>Almacén A2</td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>Auriculares Bluetooth</td>
+                            <td>Audio</td>
+                            <td><img src="img/logotipo-de-playstation.svg" alt="PlayStation"></td>
+                            <td>18</td>
+                            <td>Almacén B1</td>
+                        </tr>
+                        <tr>
+                            <td>004</td>
+                            <td>Mando inalámbrico</td>
+                            <td>Accesorios gaming</td>
+                            <td><img src="img/interruptor-de-nintendo.svg" alt="Nintendo Switch"></td>
+                            <td>15</td>
+                            <td>Almacén B2</td>
+                        </tr>
+                        <tr>
+                            <td>005</td>
+                            <td>Cable HDMI 2.1</td>
+                            <td>Cables</td>
+                            <td>Multiplataforma</td>
+                            <td>60</td>
+                            <td>Almacén C1</td>
+                        </tr>
+                        <tr>
+                            <td>006</td>
+                            <td>Webcam Full HD</td>
+                            <td>Periféricos</td>
+                            <td>PC</td>
+                            <td>12</td>
+                            <td>Almacén A3</td>
+                        </tr>
+                        <tr>
+                            <td>007</td>
+                            <td>SSD externo 1 TB</td>
+                            <td>Almacenamiento</td>
+                            <td>Multiplataforma</td>
+                            <td>20</td>
+                            <td>Almacén C2</td>
+                        </tr>
+                        <tr>
+                            <td>008</td>
+                            <td>Base refrigeradora</td>
+                            <td>Accesorios</td>
+                            <td>Portátil</td>
+                            <td>10</td>
+                            <td>Almacén D1</td>
+                        </tr>
+                        <tr>
+                            <td>009</td>
+                            <td>Micrófono USB</td>
+                            <td>Audio</td>
+                            <td><img src="img/logotipo-de-xbox.svg" alt="Xbox"></td>
+                            <td>14</td>
+                            <td>Almacén B3</td>
+                        </tr>
+                        <tr>
+                            <td>010</td>
+                            <td>Cargador USB-C 65 W</td>
+                            <td>Cargadores</td>
+                            <td><img src="img/logotipo-de-playstation.svg" alt="PlayStation"></td>
+                            <td>35</td>
+                            <td>Almacén D2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <a class="boton-anadir-producto" href="alta.html">Añadir producto</a>
         </main>
+
         <footer class="pie-catalogo">
             <p>GAME · Gestión de almacén</p>
         </footer>
