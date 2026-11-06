@@ -41,7 +41,7 @@
 }
 
 .tabla-inventario tbody tr:nth-child(even) {
-    background: #f8f5f1;
+    background: var(--resaltado_iconos);
 }
 
 .tabla-inventario tbody tr:last-child td {
