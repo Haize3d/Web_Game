@@ -232,3 +232,11 @@ img {
         grid-template-columns: repeat(4, 1fr);
     }
 }
+
+.boton {
+    padding: 24px;
+    background: var(--degr_boton);
+    border: none;
+    border-radius: 8px;
+    color: var(--resaltado_areas);
+}
